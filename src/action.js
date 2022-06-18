@@ -1,11 +1,11 @@
 const core = require("@actions/core");
-const { Github } = require("@actions/github");
+const github = require("@actions/github");
 
 class Action {
   constructor (token, context) {
     this.token = token;
     this.context = context;
-    this.client = new Github(token);
+    this.client = github.getOctokit(token);
 
     const { base, head } = this.getBaseAndHead(context)
 
@@ -38,7 +38,7 @@ class Action {
   }
 
   async getFileChanges() {
-    const response = await this.client.repos.compareCommits({
+    const response = await this.client.rest.repos.compareCommits({
       base: this.base,
       head: this.head,
       owner: this.context.repo.owner,
