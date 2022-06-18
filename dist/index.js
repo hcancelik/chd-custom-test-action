@@ -8763,7 +8763,7 @@ class Action {
   async run () {
     const changes = await this.getFileChanges();
 
-    core.info(changes);
+    core.info(JSON.stringify(changes));
 
     // const services = this.getServicesWithChanges(changes);
 
