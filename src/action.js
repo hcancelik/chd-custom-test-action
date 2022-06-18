@@ -37,7 +37,7 @@ class Action {
     return { base, head }
   }
 
-  async getChanges() {
+  async getFileChanges() {
     const response = await this.client.repos.compareCommits({
       base: this.base,
       head: this.head,
@@ -65,13 +65,12 @@ class Action {
   }
 
   async run () {
-    // TODO: get changes from github
-    const changes = await this.getChanges();
+    const changes = await this.getFileChanges();
 
-    const services = [];
+    core.info(changes);
 
+    // const services = this.getServicesWithChanges(changes);
 
-    // TODO: check which services are changes
 
     // Run tests for those services
 
