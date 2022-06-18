@@ -1,18 +1,14 @@
 const core = require('@actions/core');
-const wait = require('./wait');
+const { context } = require("@actions/github");
+const Action = require("./src/action");
 
-
-// most @actions toolkit packages have async methods
 async function run() {
   try {
-    const ms = core.getInput('milliseconds');
-    core.info(`Waiting ${ms} milliseconds ...`);
+    const token = core.getInput("TOKEN");
 
-    core.debug((new Date()).toTimeString()); // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
-    await wait(parseInt(ms));
-    core.info((new Date()).toTimeString());
+    const action = new Action(token, context);
 
-    core.setOutput('time', new Date().toTimeString());
+    await action.run();
   } catch (error) {
     core.setFailed(error.message);
   }

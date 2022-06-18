@@ -1,13 +1,15 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'CHD Portal Custom Test Action'
+description: 'Run tests for updated services and comment the coverage'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  token:
+    description: >
+      GitHub token for GitHub API requests.
+      No need to set this unless need to use a different token.
     required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps
-    description: 'The current time after waiting'
+    default: ${{ github.token }}
 runs:
   using: 'node16'
   main: 'dist/index.js'
+branding:
+  icon: 'file-text'
+  color: 'purple'
