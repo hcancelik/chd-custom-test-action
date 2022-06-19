@@ -23,6 +23,7 @@ const SERVICES_WITH_TESTS = [
 class Action {
   constructor (options) {
     this.client = github.getOctokit(options.token);
+    this.context = github.context;
     this.dbUser = options.dbUser;
     this.dbPassword = options.dbPassword;
     this.port = options.port;
@@ -30,24 +31,23 @@ class Action {
   }
 
   getBaseAndHead () {
-    const context = github.context;
-    const eventName = context.eventName;
+    const eventName = this.context.eventName;
 
     let base;
     let head;
 
     switch (eventName) {
       case "pull_request":
-        base = context.payload.pull_request?.base?.sha;
-        head = context.payload.pull_request?.head?.sha;
+        base = this.context.payload.pull_request?.base?.sha;
+        head = this.context.payload.pull_request?.head?.sha;
         break;
       case "push":
-        base = context.payload.before;
-        head = context.payload.after;
+        base = this.context.payload.before;
+        head = this.context.payload.after;
         break;
       default:
         core.setFailed(
-          `This action only supports pull requests and pushes, ${context.eventName} events are not supported.`,
+          `This action only supports pull requests and pushes, ${this.context.eventName} events are not supported.`,
         );
     }
 
@@ -60,19 +60,19 @@ class Action {
     const response = await this.client.rest.repos.compareCommits({
       base: base,
       head: head,
-      owner: github.context.repo.owner,
-      repo: github.context.repo.repo,
+      owner: this.context.repo.owner,
+      repo: this.context.repo.repo,
     });
 
     if (response.status !== 200) {
       core.setFailed(
-        `The GitHub API for comparing the base and head commits for this ${github.context.eventName} event returned ${response.status}, expected 200.`,
+        `The GitHub API for comparing the base and head commits for this ${this.context.eventName} event returned ${response.status}, expected 200.`,
       );
     }
 
     if (response.data.status !== "ahead") {
       core.setFailed(
-        `The head commit for this ${github.context.eventName} event is not ahead of the base commit.`,
+        `The head commit for this ${this.context.eventName} event is not ahead of the base commit.`,
       );
     }
 
@@ -116,6 +116,7 @@ class Action {
 
   //"✅" : "🛑"
   generateCoverageReport (service) {
+    core.info(process.cwd());
     const report = require(`./${service}/coverage-report.json`);
     let content = `## ${service}\n\n`;
 
