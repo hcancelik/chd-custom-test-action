@@ -10162,9 +10162,9 @@ class Action {
 
     content += `Test suite ran ${report.numFailedTests === 0 ? "successfully" : "with errors"}.\n`;
     if (report.numFailedTests > 0) {
-      content += `${report.numFailedTests} tests failed.\n`;
+      content += `${report.numFailedTests} test${report.numFailedTests > 1 ? "s" : ""} failed.\n`;
     } else {
-      content += `${report.numPassedTests} tests passed in ${report.numPassedTestSuites} suites.\n`;
+      content += `${report.numPassedTests} test${report.numFailedTests > 1 ? "s" : ""} passed in ${report.numPassedTestSuites} suites.\n`;
     }
 
     return content;
