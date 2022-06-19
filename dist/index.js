@@ -10257,7 +10257,7 @@ async function checkComment (token) {
 async function addComment (token, comment) {
   const octokit = getOctokit(token);
   const { owner, repo } = context.repo;
-  const { data } = await octokit.rest.repos.createComment({
+  const { data } = await octokit.rest.issues.createComment({
     owner,
     repo,
     issue_number: prNumber,
