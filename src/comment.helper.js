@@ -7,7 +7,7 @@ const prNumber = github.context.payload.pull_request?.number;
 async function checkComment (token) {
   const octokit = getOctokit(token);
   const { owner, repo } = context.repo;
-  const commentList = await octokit.paginate(
+  const commentList = await octokit.rest.paginate(
     'GET /repos/{owner}/{repo}/issues/{issue_number}/comments',
     {
       owner,
@@ -26,7 +26,7 @@ async function checkComment (token) {
 async function addComment (token, comment) {
   const octokit = getOctokit(token);
   const { owner, repo } = context.repo;
-  const { data } = await octokit.repos.createCommitComment({
+  const { data } = await octokit.rest.repos.createCommitComment({
     owner,
     repo,
     issue_number: prNumber,
@@ -39,7 +39,7 @@ async function addComment (token, comment) {
 async function updateComment (token, existingComment, comment) {
   const octokit = getOctokit(token);
   const { owner, repo } = context.repo;
-  const { data } = await octokit.issues.updateComment({
+  const { data } = await octokit.rest.issues.updateComment({
     owner,
     repo,
     comment_id: existingComment.id,
