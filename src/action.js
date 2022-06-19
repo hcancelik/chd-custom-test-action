@@ -1,16 +1,30 @@
 const core = require("@actions/core");
 const github = require("@actions/github");
+const exec = require('@actions/exec');
+
+const SERVICES_WITH_TESTS = [
+  "AccountingService",
+  "AgreementService",
+  "AnalyticsService",
+  "AssetService",
+  "AuthenticationService",
+  "CRMService",
+  "ClientActivityService",
+  "ClientSalesService",
+  "ClientService",
+  "CommunicationService",
+  "CredentialService",
+  "DataMappingService",
+  "GatewayService",
+  "NotificationService",
+  "ReportingService",
+]
 
 class Action {
   constructor (token, context) {
     this.token = token;
     this.context = context;
     this.client = github.getOctokit(token);
-
-    const { base, head } = this.getBaseAndHead(context)
-
-    this.base = base;
-    this.head = head;
   }
 
   getBaseAndHead(context) {
@@ -38,9 +52,11 @@ class Action {
   }
 
   async getFileChanges() {
+    const { base, head } = this.getBaseAndHead(this.context)
+
     const response = await this.client.rest.repos.compareCommits({
-      base: this.base,
-      head: this.head,
+      base: base,
+      head: head,
       owner: this.context.repo.owner,
       repo: this.context.repo.repo
     })
@@ -60,23 +76,50 @@ class Action {
     return response.data.files;
   }
 
-  getServicesWithChanges() {
+  getServicesWithChanges(changes) {
+    const services = new Set();
 
+    changes.forEach((change) => {
+      const service = change.filename?.split('/')[0] || "";
+
+      if (SERVICES_WITH_TESTS.includes(service)) {
+        services.add(service);
+      }
+    })
+
+    return Array.from(services);
+  }
+
+  async runTests(services) {
+    for (let i = 0; i < services.length; i++) {
+      const service = services[i];
+      const commandsToRun = [
+        `cd ${service}`,
+        `ls -la`,
+        "source $NVM_DIR/nvm.sh",
+        "npm install",
+        // "PORT=9000 DB_USERNAME_TEST=postgres DB_PASSWORD_TEST=postgres npm run test:ci",
+      ];
+
+      for (let i = 0; i < commandsToRun.length; i++) {
+        await exec.exec('bash', ['-c', commandsToRun[i]]);
+      }
+    }
   }
 
   async run () {
     const changes = await this.getFileChanges();
 
-    core.info(JSON.stringify(changes));
+    const services = this.getServicesWithChanges(changes);
 
-    // const services = this.getServicesWithChanges(changes);
+    if (services.length === 0) {
+      core.info("No files have changed in service directories with tests.")
+    } else {
+      await this.runTests(services);
 
-
-    // Run tests for those services
-
-    // Comment the coverage report results in a single comment
-    // (Update existing comment if it exists)
-
+      // Comment the coverage report results in a single comment
+      // (Update existing comment if it exists)
+    }
   }
 }
 
