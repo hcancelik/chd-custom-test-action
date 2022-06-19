@@ -93,16 +93,11 @@ class Action {
   async runTests(services) {
     for (let i = 0; i < services.length; i++) {
       const service = services[i];
-      const commandsToRun = [
-        `cd ${service}`,
-        `ls -la`,
-        "source $NVM_DIR/nvm.sh",
-        "npm install",
-        // "PORT=9000 DB_USERNAME_TEST=postgres DB_PASSWORD_TEST=postgres npm run test:ci",
-      ];
 
-      for (let i = 0; i < commandsToRun.length; i++) {
-        await exec.exec('bash', ['-c', commandsToRun[i]]);
+      if (SERVICES_WITH_TESTS.includes(service)) {
+        core.info(`Installing npm packages for ${service}...`);
+
+        await exec.exec(`npm --prefix ./${service} run test:ci`);
       }
     }
   }
