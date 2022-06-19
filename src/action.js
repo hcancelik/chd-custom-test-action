@@ -116,7 +116,7 @@ class Action {
 
   //"✅" : "🛑"
   generateCoverageReport (service) {
-    const report = require(`./${service}/test-coverage-report.json`);
+    const report = require(`./${service}/coverage-report.json`);
     let content = `## ${service}\n\n`;
 
     if (!report.success) {
