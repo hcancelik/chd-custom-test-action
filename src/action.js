@@ -119,11 +119,12 @@ class Action {
     }
   }
 
-  generateCoverageReport (service) {
+  async generateCoverageReport (service) {
     const report = require(`${process.cwd()}/${service}/coverage-report.json`);
     let content = `## ${service}\n`;
 
-    core.info(Object.keys(report).length);
+    core.info(`${process.cwd()}/${service}/coverage-report.json`);
+    await exec.exec(`ls -la ${process.cwd()}/${service}/`);
 
     if (!report.success) {
       content += `🛑 Test suite has failed to run.\n\n`;
@@ -150,7 +151,7 @@ class Action {
     return content;
   }
 
-  generateReportComment (services) {
+  async generateReportComment (services) {
     core.info(`Generating coverage report...`);
 
     let comment = generateTagLine();
@@ -159,7 +160,7 @@ class Action {
     for (let i = 0; i < services.length; i++) {
       const service = services[i];
 
-      comment += this.generateCoverageReport(service);
+      comment += await this.generateCoverageReport(service);
 
       if (i !== services.length - 1) {
         comment += "---\n";
@@ -181,7 +182,7 @@ class Action {
       await this.runTests(services);
 
       if (this.coverage || this.coverage === "true") {
-        const comment = this.generateReportComment(services);
+        const comment = await this.generateReportComment(services);
 
         await postComment(comment);
       }
