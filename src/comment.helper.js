@@ -7,9 +7,7 @@ const prNumber = github.context.payload.pull_request?.number;
 async function checkComment (token) {
   const octokit = getOctokit(token);
   const { owner, repo } = context.repo;
-  const commentList = await octokit.rest.paginate(
-    'GET /repos/{owner}/{repo}/issues/{issue_number}/comments',
-    {
+  const commentList = await octokit.rest.issues.listComments({
       owner,
       repo,
       issue_number: prNumber,
