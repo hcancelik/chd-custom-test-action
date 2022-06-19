@@ -10161,6 +10161,8 @@ class Action {
     const report = __ncc_wildcard$0(service);
     let content = `## ${service}\n`;
 
+    core.info(Object.keys(report).length);
+
     if (!report.success) {
       content += `🛑 Test suite has failed to run.\n\n`;
 
