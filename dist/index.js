@@ -10066,7 +10066,7 @@ class Action {
     this.client = github.getOctokit(options.token);
     this.context = github.context;
 
-    this.checkCoverage = options.checkCoverage;
+    this.coverage = options.coverage;
     this.dbUser = options.dbUser;
     this.dbPassword = options.dbPassword;
     this.port = options.port;
@@ -10216,7 +10216,7 @@ class Action {
       core.info(`Found services with changes: ${services.join(", ")}...`);
       await this.runTests(services);
 
-      if (this.checkCoverage || this.checkCoverage === "true") {
+      if (this.coverage || this.coverage === "true") {
         const comment = this.generateReportComment(services);
 
         await postComment(comment);
@@ -10655,14 +10655,14 @@ const Action = __nccwpck_require__(3348);
 
 async function run() {
   try {
-    const checkCoverage = core.getInput('check-coverage');
+    const coverage = core.getInput('COVERAGE');
     const token = core.getInput("TOKEN");
     const dbUser = core.getInput("TEST_DB_USER");
     const dbPassword = core.getInput("TEST_DB_PASSWORD");
     const port = core.getInput("PORT");
     const coverageThreshold = core.getInput("COVERAGE_THRESHOLD");
 
-    const action = new Action({ checkCoverage, token, dbUser, dbPassword, port, coverageThreshold });
+    const action = new Action({ coverage, token, dbUser, dbPassword, port, coverageThreshold });
 
     await action.run();
   } catch (error) {

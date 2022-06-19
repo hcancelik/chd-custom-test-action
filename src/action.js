@@ -28,7 +28,7 @@ class Action {
     this.client = github.getOctokit(options.token);
     this.context = github.context;
 
-    this.checkCoverage = options.checkCoverage;
+    this.coverage = options.coverage;
     this.dbUser = options.dbUser;
     this.dbPassword = options.dbPassword;
     this.port = options.port;
@@ -178,7 +178,7 @@ class Action {
       core.info(`Found services with changes: ${services.join(", ")}...`);
       await this.runTests(services);
 
-      if (this.checkCoverage || this.checkCoverage === "true") {
+      if (this.coverage || this.coverage === "true") {
         const comment = this.generateReportComment(services);
 
         await postComment(comment);
