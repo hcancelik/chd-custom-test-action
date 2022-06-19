@@ -123,8 +123,8 @@ module.exports = {
       {
         category: "Branches",
         percentage: getPercentage(details.coveredBranches, details.totalBranches),
-        covered: details.coveredFunctions,
-        total: details.totalFunctions,
+        covered: details.coveredBranches,
+        total: details.totalBranches,
       },
       {
         category: "Functions",

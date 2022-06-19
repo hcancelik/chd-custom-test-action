@@ -49,7 +49,7 @@ async function updateComment (token, existingComment, comment) {
 
 module.exports = {
   generateTagLine () {
-    return `<!-- Coverage Report: ${prNumber} -->`;
+    return `<!-- Coverage Report: ${prNumber} -->` + "\n";
   },
   async postComment (token, comment) {
     const existingComment = await checkComment(token);

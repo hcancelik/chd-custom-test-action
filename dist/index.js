@@ -10282,7 +10282,7 @@ async function updateComment (token, existingComment, comment) {
 
 module.exports = {
   generateTagLine () {
-    return `<!-- Coverage Report: ${prNumber} -->`;
+    return `<!-- Coverage Report: ${prNumber} -->` + "\n";
   },
   async postComment (token, comment) {
     const existingComment = await checkComment(token);
@@ -10430,8 +10430,8 @@ module.exports = {
       {
         category: "Branches",
         percentage: getPercentage(details.coveredBranches, details.totalBranches),
-        covered: details.coveredFunctions,
-        total: details.totalFunctions,
+        covered: details.coveredBranches,
+        total: details.totalBranches,
       },
       {
         category: "Functions",
