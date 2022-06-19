@@ -10126,12 +10126,16 @@ class Action {
   }
 
   async runTests(services) {
+    await exec.exec("source $NVM_DIR/nvm.sh");
+
     for (let i = 0; i < services.length; i++) {
       const service = services[i];
 
       if (SERVICES_WITH_TESTS.includes(service)) {
         core.info(`Installing npm packages for ${service}...`);
+        await exec.exec(`npm --prefix ./${service} install`);
 
+        core.info(`Running tests for ${service}...`);
         await exec.exec(`npm --prefix ./${service} run test:ci`);
       }
     }
