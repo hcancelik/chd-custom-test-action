@@ -2,7 +2,7 @@ const core = require("@actions/core");
 const github = require("@actions/github");
 const exec = require("@actions/exec");
 
-const { getCoverageSummary } = require("./coverage.helper");
+const { readCoverageFile, getCoverageSummary } = require("./coverage.helper");
 const { generateTagLine, postComment } = require("./comment.helper");
 
 const SERVICES_WITH_TESTS = [
@@ -120,11 +120,8 @@ class Action {
   }
 
   async generateCoverageReport (service) {
-    const report = require(`${process.cwd()}/${service}/coverage-report.json`);
+    const report = await readCoverageFile(`${process.cwd()}/${service}/coverage-report.json`);
     let content = `## ${service}\n`;
-
-    core.info(`${process.cwd()}/${service}/coverage-report.json`);
-    await exec.exec(`ls -la ${process.cwd()}/${service}/`);
 
     if (!report.success) {
       content += `🛑 Test suite has failed to run.\n\n`;

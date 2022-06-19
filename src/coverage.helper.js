@@ -1,3 +1,5 @@
+const fs = require('fs').promises;
+
 function counter (data, key) {
   return Object.values(data[key]).length;
 }
@@ -103,6 +105,11 @@ function getCoverageDetails (report) {
 }
 
 module.exports = {
+  readCoverageFile: async (path) => {
+    const contents = await fs.readFile(path, 'utf8');
+
+    return JSON.parse(contents);
+  },
   getCoverageSummary: (report) => {
     const details = getCoverageDetails(report);
 

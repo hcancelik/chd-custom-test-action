@@ -15,8 +15,8 @@ test("getServicesWithChanges returns correct services", async () => {
   await expect(changes).toEqual(["ClientService", "ReportingService"]);
 });
 
-test("coverage report results", () => {
-  const response = action.generateCoverageReport("tests");
+test("coverage report results", async () => {
+  const response = await action.generateCoverageReport("tests");
 
   expect(response).toBe(helper.exampleCoverageComment());
 });
