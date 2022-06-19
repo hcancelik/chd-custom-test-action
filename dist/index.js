@@ -10151,8 +10151,7 @@ class Action {
 
   //"✅" : "🛑"
   generateCoverageReport (service) {
-    core.info(process.cwd());
-    const report = require(`./${service}/coverage-report.json`);
+    const report = require(`${process.cwd()}/${service}/coverage-report.json`);
     let content = `## ${service}\n\n`;
 
     if (!report.success) {
