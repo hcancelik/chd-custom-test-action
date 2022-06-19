@@ -3,7 +3,7 @@ const Action = require("./src/action");
 
 async function run() {
   try {
-    const checkCoverage = core.getInput('check-coverage');
+    const checkCoverage = core.getInput('CHECK_COVERAGE');
     const token = core.getInput("TOKEN");
     const dbUser = core.getInput("TEST_DB_USER");
     const dbPassword = core.getInput("TEST_DB_PASSWORD");
