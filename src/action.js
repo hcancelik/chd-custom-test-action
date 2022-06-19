@@ -91,8 +91,6 @@ class Action {
   }
 
   async runTests(services) {
-    await exec.exec("source $NVM_DIR/nvm.sh");
-
     for (let i = 0; i < services.length; i++) {
       const service = services[i];
 
