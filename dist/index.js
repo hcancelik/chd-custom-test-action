@@ -10240,14 +10240,14 @@ const prNumber = github.context.payload.pull_request?.number;
 async function checkComment (token) {
   const octokit = getOctokit(token);
   const { owner, repo } = context.repo;
-  const commentList = await octokit.rest.issues.listComments({
+  const response = await octokit.rest.issues.listComments({
       owner,
       repo,
       issue_number: prNumber,
     }
   );
 
-  const previousReport = commentList.find((comment) =>
+  const previousReport = response.data.find((comment) =>
     comment.body?.startsWith(module.exports.generateTagLine())
   );
 
