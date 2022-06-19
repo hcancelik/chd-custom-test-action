@@ -98,7 +98,7 @@ class Action {
       const service = services[i];
 
       if (SERVICES_WITH_TESTS.includes(service)) {
-        core.startGroup("${service}");
+        core.startGroup(`${service}`);
 
         core.info(`Installing npm packages for ${service}...`);
         await exec.exec(`npm --prefix ./${service} install`);

@@ -7,12 +7,12 @@ inputs:
       No need to set this unless need to use a different token.
     required: true
     default: ${{ github.token }}
-  database_user:
+  test_db_user:
     description: >
       Test database user.
     required: true
     default: postgres
-  database_password:
+  test_db_password:
     description: >
       Test database password.
     required: true
