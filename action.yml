@@ -1,6 +1,9 @@
-name: 'CHD Portal Custom Test Action'
-description: 'Run tests for updated services and comment the coverage'
+name: CHD Portal Custom Test Action
+description: Run tests for updated services and comment the coverage
 inputs:
+  check_coverage:
+    description: Check if the coverage is above the threshold
+    required: true
   token:
     description: >
       GitHub token for GitHub API requests.
@@ -22,6 +25,11 @@ inputs:
       Port number to pass to services for test.
     required: true
     default: "9000"
+  coverage_threshold:
+    description: >
+      Coverage threshold to pass to services for test.
+    required: true
+    default: "90"
 runs:
   using: 'node16'
   main: 'dist/index.js'

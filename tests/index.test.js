@@ -16,8 +16,7 @@ test("getServicesWithChanges returns correct services", async () => {
 });
 
 test("coverage report results", () => {
-  // const html = action.generateCoverageReport("../tests");
-  const html = "";
+  const response = action.generateCoverageReport("tests");
 
-  expect(html).toBe("");
-})
+  expect(response).toBe(helper.exampleCoverageComment());
+});

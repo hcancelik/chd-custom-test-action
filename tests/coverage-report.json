@@ -1,14 +1,14 @@
 {
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
-  "numPassedTestSuites": 19,
-  "numPassedTests": 302,
+  "numPassedTestSuites": 10,
+  "numPassedTests": 300,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
-  "numTotalTestSuites": 19,
-  "numTotalTests": 302,
+  "numTotalTestSuites": 10,
+  "numTotalTests": 300,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -30,4431 +30,13 @@
   "success": true,
   "testResults": [
     {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Budget model"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 8
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "relationship: service"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model relationship: service it should belong to a service",
-          "location": {
-            "column": 4,
-            "line": 15
-          },
-          "status": "passed",
-          "title": "it should belong to a service"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "relationship: service"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model relationship: service it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 22
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "logic: disallow multiple recurring budgets (per client, per service) for a single period",
-            "active recurring budget"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model logic: disallow multiple recurring budgets (per client, per service) for a single period active recurring budget valid current period",
-          "location": {
-            "column": 6,
-            "line": 33
-          },
-          "status": "passed",
-          "title": "valid current period"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "logic: disallow multiple recurring budgets (per client, per service) for a single period",
-            "active recurring budget"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model logic: disallow multiple recurring budgets (per client, per service) for a single period active recurring budget it does not apply to valid one-time budget",
-          "location": {
-            "column": 6,
-            "line": 52
-          },
-          "status": "passed",
-          "title": "it does not apply to valid one-time budget"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "logic: disallow multiple recurring budgets (per client, per service) for a single period",
-            "active recurring budget"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model logic: disallow multiple recurring budgets (per client, per service) for a single period active recurring budget valid current period ends mid-month",
-          "location": {
-            "column": 6,
-            "line": 69
-          },
-          "status": "passed",
-          "title": "valid current period ends mid-month"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "logic: disallow multiple recurring budgets (per client, per service) for a single period",
-            "active recurring budget"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model logic: disallow multiple recurring budgets (per client, per service) for a single period active recurring budget valid current period multiple",
-          "location": {
-            "column": 6,
-            "line": 85
-          },
-          "status": "passed",
-          "title": "valid current period multiple"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "logic: disallow multiple recurring budgets (per client, per service) for a single period",
-            "active recurring budget"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model logic: disallow multiple recurring budgets (per client, per service) for a single period active recurring budget valid indefinite",
-          "location": {
-            "column": 6,
-            "line": 101
-          },
-          "status": "passed",
-          "title": "valid indefinite"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "logic: disallow multiple recurring budgets (per client, per service) for a single period",
-            "active recurring budget"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model logic: disallow multiple recurring budgets (per client, per service) for a single period active recurring budget existingBudget.endsAt equals null",
-          "location": {
-            "column": 6,
-            "line": 117
-          },
-          "status": "passed",
-          "title": "existingBudget.endsAt equals null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "logic: disallow multiple recurring budgets (per client, per service) for a single period",
-            "active recurring budget"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model logic: disallow multiple recurring budgets (per client, per service) for a single period active recurring budget existingBudget.endsAt equals null for prior period",
-          "location": {
-            "column": 6,
-            "line": 133
-          },
-          "status": "passed",
-          "title": "existingBudget.endsAt equals null for prior period"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "logic: disallow multiple recurring budgets (per client, per service) for a single period",
-            "overlapping recurring budget"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model logic: disallow multiple recurring budgets (per client, per service) for a single period overlapping recurring budget startsAt before existingBudget.endsAt",
-          "location": {
-            "column": 6,
-            "line": 157
-          },
-          "status": "passed",
-          "title": "startsAt before existingBudget.endsAt"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "logic: allow multiple recurring budgets (per client, per service) for a single period",
-            "active recurring budget"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model logic: allow multiple recurring budgets (per client, per service) for a single period active recurring budget create second recurring budget",
-          "location": {
-            "column": 6,
-            "line": 177
-          },
-          "status": "passed",
-          "title": "create second recurring budget"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: tenantId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 199
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: tenantId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 207
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: clientId"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: clientId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 217
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: clientId"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: clientId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 225
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: budgetType"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: budgetType it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 235
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: budgetType"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: budgetType it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 243
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: budgetType"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: budgetType it should be invalid if incorrect budget type",
-          "location": {
-            "column": 4,
-            "line": 251
-          },
-          "status": "passed",
-          "title": "it should be invalid if incorrect budget type"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: startsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: startsAt it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 261
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: startsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: startsAt it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 269
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: startsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: startsAt it should be invalid if not date",
-          "location": {
-            "column": 4,
-            "line": 277
-          },
-          "status": "passed",
-          "title": "it should be invalid if not date"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: startsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: startsAt it should be before the end date",
-          "location": {
-            "column": 4,
-            "line": 285
-          },
-          "status": "passed",
-          "title": "it should be before the end date"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: startsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: startsAt it should be valid if it is the same as end date",
-          "location": {
-            "column": 4,
-            "line": 294
-          },
-          "status": "passed",
-          "title": "it should be valid if it is the same as end date"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: endsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: endsAt it should be valid if null",
-          "location": {
-            "column": 4,
-            "line": 305
-          },
-          "status": "passed",
-          "title": "it should be valid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: endsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: endsAt it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 311
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: endsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: endsAt it should be invalid if not date",
-          "location": {
-            "column": 4,
-            "line": 319
-          },
-          "status": "passed",
-          "title": "it should be invalid if not date"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: endsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: endsAt it should be after the start date",
-          "location": {
-            "column": 4,
-            "line": 327
-          },
-          "status": "passed",
-          "title": "it should be after the start date"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: endsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: endsAt it should be valid if it is the same as start date",
-          "location": {
-            "column": 4,
-            "line": 336
-          },
-          "status": "passed",
-          "title": "it should be valid if it is the same as start date"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: invoiceAmount"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: invoiceAmount it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 347
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: invoiceAmount"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: invoiceAmount it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 355
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: actualSpend"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: actualSpend it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 365
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: actualSpend"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: actualSpend it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 373
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: actualSpend"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: actualSpend it should equal the invoice amount minus markup",
-          "location": {
-            "column": 4,
-            "line": 381
-          },
-          "status": "passed",
-          "title": "it should equal the invoice amount minus markup"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: actualSpend"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: actualSpend it should equal the invoice amount minus markup when updated",
-          "location": {
-            "column": 4,
-            "line": 390
-          },
-          "status": "passed",
-          "title": "it should equal the invoice amount minus markup when updated"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: markupPercentage"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: markupPercentage it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 403
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: markupPercentage"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: markupPercentage it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 411
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: notes"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: notes it should be valid if null",
-          "location": {
-            "column": 4,
-            "line": 421
-          },
-          "status": "passed",
-          "title": "it should be valid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: notes"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: notes it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 427
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: isExternal"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: isExternal it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 437
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: isExternal"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: isExternal it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 445
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: isHeavyUp"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: isHeavyUp it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 455
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: isHeavyUp"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: isHeavyUp it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 463
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: isDirectPay"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: isDirectPay it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 473
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: isDirectPay"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: isDirectPay it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 481
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: isVsd"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: isVsd it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 491
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "property: isVsd"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model property: isVsd it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 499
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: recurring"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: recurring it should include recurring budgets",
-          "location": {
-            "column": 4,
-            "line": 509
-          },
-          "status": "passed",
-          "title": "it should include recurring budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: recurring"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: recurring it should not include one-time budgets",
-          "location": {
-            "column": 4,
-            "line": 517
-          },
-          "status": "passed",
-          "title": "it should not include one-time budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: one-time"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: one-time it should not include recurring budgets",
-          "location": {
-            "column": 4,
-            "line": 527
-          },
-          "status": "passed",
-          "title": "it should not include recurring budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: one-time"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: one-time it should include one-time budgets",
-          "location": {
-            "column": 4,
-            "line": 535
-          },
-          "status": "passed",
-          "title": "it should include one-time budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: active"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: active it should include active budgets",
-          "location": {
-            "column": 4,
-            "line": 545
-          },
-          "status": "passed",
-          "title": "it should include active budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: active"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: active it should not include inactive budgets",
-          "location": {
-            "column": 4,
-            "line": 556
-          },
-          "status": "passed",
-          "title": "it should not include inactive budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: active"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: active it should not include future budgets",
-          "location": {
-            "column": 4,
-            "line": 567
-          },
-          "status": "passed",
-          "title": "it should not include future budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: inactive"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: inactive it should not include active budgets",
-          "location": {
-            "column": 4,
-            "line": 580
-          },
-          "status": "passed",
-          "title": "it should not include active budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: inactive"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: inactive it should include inactive budgets",
-          "location": {
-            "column": 4,
-            "line": 591
-          },
-          "status": "passed",
-          "title": "it should include inactive budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: inactiveForDate"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: inactiveForDate it should not include active budgets",
-          "location": {
-            "column": 4,
-            "line": 604
-          },
-          "status": "passed",
-          "title": "it should not include active budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: inactiveForDate"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: inactiveForDate it should include inactive budgets",
-          "location": {
-            "column": 4,
-            "line": 615
-          },
-          "status": "passed",
-          "title": "it should include inactive budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: future"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: future it should include future budgets",
-          "location": {
-            "column": 4,
-            "line": 628
-          },
-          "status": "passed",
-          "title": "it should include future budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: future"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: future it should not include active budgets",
-          "location": {
-            "column": 4,
-            "line": 639
-          },
-          "status": "passed",
-          "title": "it should not include active budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: future"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: future it should not include inactive budgets",
-          "location": {
-            "column": 4,
-            "line": 650
-          },
-          "status": "passed",
-          "title": "it should not include inactive budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: forDate"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: forDate it should include all budgets for date",
-          "location": {
-            "column": 4,
-            "line": 663
-          },
-          "status": "passed",
-          "title": "it should include all budgets for date"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: canceling"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: canceling it should include active budgets with an end date",
-          "location": {
-            "column": 4,
-            "line": 685
-          },
-          "status": "passed",
-          "title": "it should include active budgets with an end date"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: canceling"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: canceling it should not include future budgets without an end date",
-          "location": {
-            "column": 4,
-            "line": 696
-          },
-          "status": "passed",
-          "title": "it should not include future budgets without an end date"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: canceling"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: canceling it should not include future budgets with an end date",
-          "location": {
-            "column": 4,
-            "line": 707
-          },
-          "status": "passed",
-          "title": "it should not include future budgets with an end date"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: canceling"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: canceling it should not include active budgets without an end date",
-          "location": {
-            "column": 4,
-            "line": 718
-          },
-          "status": "passed",
-          "title": "it should not include active budgets without an end date"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: canceling"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: canceling it should not include inactive budgets",
-          "location": {
-            "column": 4,
-            "line": 729
-          },
-          "status": "passed",
-          "title": "it should not include inactive budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: external"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: external it should include external budgets",
-          "location": {
-            "column": 4,
-            "line": 742
-          },
-          "status": "passed",
-          "title": "it should include external budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: external"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: external it should not include internal budgets",
-          "location": {
-            "column": 4,
-            "line": 750
-          },
-          "status": "passed",
-          "title": "it should not include internal budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: internalOnly"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: internalOnly it should include internal budgets",
-          "location": {
-            "column": 4,
-            "line": 760
-          },
-          "status": "passed",
-          "title": "it should include internal budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: internalOnly"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: internalOnly it should not include internal budgets",
-          "location": {
-            "column": 4,
-            "line": 768
-          },
-          "status": "passed",
-          "title": "it should not include internal budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Budget model",
-            "scope: ordered"
-          ],
-          "failureMessages": [],
-          "fullName": "Budget model scope: ordered it should be in order",
-          "location": {
-            "column": 4,
-            "line": 778
-          },
-          "status": "passed",
-          "title": "it should be in order"
-        }
-      ],
-      "endTime": 1655631629977,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/budget.spec.js",
-      "startTime": 1655631626386,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Fee model"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 8
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "relationship: service"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model relationship: service it should belong to a service",
-          "location": {
-            "column": 4,
-            "line": 15
-          },
-          "status": "passed",
-          "title": "it should belong to a service"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "relationship: service"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model relationship: service it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 22
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "relationship: budget"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model relationship: budget it should belong to a budget",
-          "location": {
-            "column": 4,
-            "line": 32
-          },
-          "status": "passed",
-          "title": "it should belong to a budget"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "relationship: budget"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model relationship: budget it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 39
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "logic: allow multiple recurring fees (per client, per service) for a single period",
-            "active recurring fee"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model logic: allow multiple recurring fees (per client, per service) for a single period active recurring fee create second recurring fee",
-          "location": {
-            "column": 6,
-            "line": 50
-          },
-          "status": "passed",
-          "title": "create second recurring fee"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "logic: disallow multiple recurring fees (per client, per service) for a single period",
-            "active recurring fee"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model logic: disallow multiple recurring fees (per client, per service) for a single period active recurring fee valid current period",
-          "location": {
-            "column": 6,
-            "line": 74
-          },
-          "status": "passed",
-          "title": "valid current period"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "logic: disallow multiple recurring fees (per client, per service) for a single period",
-            "active recurring fee"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model logic: disallow multiple recurring fees (per client, per service) for a single period active recurring fee it does not apply to valid one-time fee",
-          "location": {
-            "column": 6,
-            "line": 90
-          },
-          "status": "passed",
-          "title": "it does not apply to valid one-time fee"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "logic: disallow multiple recurring fees (per client, per service) for a single period",
-            "active recurring fee"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model logic: disallow multiple recurring fees (per client, per service) for a single period active recurring fee valid current period ends mid-month",
-          "location": {
-            "column": 6,
-            "line": 107
-          },
-          "status": "passed",
-          "title": "valid current period ends mid-month"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "logic: disallow multiple recurring fees (per client, per service) for a single period",
-            "active recurring fee"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model logic: disallow multiple recurring fees (per client, per service) for a single period active recurring fee valid current period multiple",
-          "location": {
-            "column": 6,
-            "line": 123
-          },
-          "status": "passed",
-          "title": "valid current period multiple"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "logic: disallow multiple recurring fees (per client, per service) for a single period",
-            "active recurring fee"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model logic: disallow multiple recurring fees (per client, per service) for a single period active recurring fee valid indefinite",
-          "location": {
-            "column": 6,
-            "line": 139
-          },
-          "status": "passed",
-          "title": "valid indefinite"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "logic: disallow multiple recurring fees (per client, per service) for a single period",
-            "active recurring fee"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model logic: disallow multiple recurring fees (per client, per service) for a single period active recurring fee existingFee.endsAt equals null",
-          "location": {
-            "column": 6,
-            "line": 155
-          },
-          "status": "passed",
-          "title": "existingFee.endsAt equals null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "logic: disallow multiple recurring fees (per client, per service) for a single period",
-            "active recurring fee"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model logic: disallow multiple recurring fees (per client, per service) for a single period active recurring fee existingFee.endsAt equals null for prior period",
-          "location": {
-            "column": 6,
-            "line": 171
-          },
-          "status": "passed",
-          "title": "existingFee.endsAt equals null for prior period"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "logic: disallow multiple recurring fees (per client, per service) for a single period",
-            "overlapping recurring fee"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model logic: disallow multiple recurring fees (per client, per service) for a single period overlapping recurring fee startsAt before existingFee.endsAt",
-          "location": {
-            "column": 6,
-            "line": 195
-          },
-          "status": "passed",
-          "title": "startsAt before existingFee.endsAt"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: tenantId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 214
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: tenantId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 222
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: clientId"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: clientId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 232
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: clientId"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: clientId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 240
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: feeType"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: feeType it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 250
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: feeType"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: feeType it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 258
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: feeType"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: feeType it should be invalid if incorrect fee type",
-          "location": {
-            "column": 4,
-            "line": 266
-          },
-          "status": "passed",
-          "title": "it should be invalid if incorrect fee type"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: startsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: startsAt it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 276
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: startsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: startsAt it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 284
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: startsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: startsAt it should be invalid if not date",
-          "location": {
-            "column": 4,
-            "line": 292
-          },
-          "status": "passed",
-          "title": "it should be invalid if not date"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: startsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: startsAt it should be before the end date",
-          "location": {
-            "column": 4,
-            "line": 300
-          },
-          "status": "passed",
-          "title": "it should be before the end date"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: endsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: endsAt it should be valid if null",
-          "location": {
-            "column": 4,
-            "line": 311
-          },
-          "status": "passed",
-          "title": "it should be valid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: endsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: endsAt it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 317
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: endsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: endsAt it should be invalid if not date",
-          "location": {
-            "column": 4,
-            "line": 325
-          },
-          "status": "passed",
-          "title": "it should be invalid if not date"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: endsAt"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: endsAt it should be after the start date",
-          "location": {
-            "column": 4,
-            "line": 333
-          },
-          "status": "passed",
-          "title": "it should be after the start date"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: invoiceAmount"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: invoiceAmount it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 344
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: invoiceAmount"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: invoiceAmount it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 352
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: managementPercentage"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: managementPercentage it should be valid if null",
-          "location": {
-            "column": 4,
-            "line": 362
-          },
-          "status": "passed",
-          "title": "it should be valid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: managementPercentage"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: managementPercentage it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 368
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: notes"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: notes it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 378
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee model",
-            "property: notes"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee model property: notes it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 384
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        }
-      ],
-      "endTime": 1655631631836,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/fee.spec.js",
-      "startTime": 1655631630014,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Service model"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 9
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "relationship: serviceGroup"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model relationship: serviceGroup it should belong to a service group",
-          "location": {
-            "column": 4,
-            "line": 16
-          },
-          "status": "passed",
-          "title": "it should belong to a service group"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "relationship: serviceGroup"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model relationship: serviceGroup it should be valid if null",
-          "location": {
-            "column": 4,
-            "line": 24
-          },
-          "status": "passed",
-          "title": "it should be valid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "relationship: budgets"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model relationship: budgets it should have many budgets",
-          "location": {
-            "column": 4,
-            "line": 32
-          },
-          "status": "passed",
-          "title": "it should have many budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "relationship: oemBudgets"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model relationship: oemBudgets it should have many OEM budgets",
-          "location": {
-            "column": 4,
-            "line": 46
-          },
-          "status": "passed",
-          "title": "it should have many OEM budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "relationship: feeServices"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model relationship: feeServices it should have many Fee Services",
-          "location": {
-            "column": 4,
-            "line": 60
-          },
-          "status": "passed",
-          "title": "it should have many Fee Services"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "relationship: rollovers"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model relationship: rollovers it should have many Rollovers",
-          "location": {
-            "column": 4,
-            "line": 74
-          },
-          "status": "passed",
-          "title": "it should have many Rollovers"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: tenantId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 88
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: tenantId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 96
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: groupId"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: groupId it should be valid if null",
-          "location": {
-            "column": 4,
-            "line": 106
-          },
-          "status": "passed",
-          "title": "it should be valid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: groupId"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: groupId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 112
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: name"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: name it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 122
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: name"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: name it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 130
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: description"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: description it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 140
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: description"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: description it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 146
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: commissionable"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: commissionable it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 156
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: commissionable"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: commissionable it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 164
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: order"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: order it should be valid if null",
-          "location": {
-            "column": 4,
-            "line": 174
-          },
-          "status": "passed",
-          "title": "it should be valid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: order"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: order it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 180
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: active"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: active it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 190
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: active"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: active it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 198
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: isMarginal"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: isMarginal it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 208
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: isMarginal"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: isMarginal it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 216
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: marginAmount"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: marginAmount it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 226
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: marginAmount"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: marginAmount it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 234
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service model",
-            "property: marginAmount"
-          ],
-          "failureMessages": [],
-          "fullName": "Service model property: marginAmount it should be greater than zero if isMarginal is true",
-          "location": {
-            "column": 4,
-            "line": 242
-          },
-          "status": "passed",
-          "title": "it should be greater than zero if isMarginal is true"
-        }
-      ],
-      "endTime": 1655631632984,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/service.spec.js",
-      "startTime": 1655631631859,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Service Group model"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 7
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "relationship: services"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model relationship: services it should have many services",
-          "location": {
-            "column": 4,
-            "line": 14
-          },
-          "status": "passed",
-          "title": "it should have many services"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: tenantId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 28
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: tenantId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 36
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: name"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: name it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 46
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: name"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: name it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 54
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: shortName"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: shortName it should be valid if null",
-          "location": {
-            "column": 4,
-            "line": 64
-          },
-          "status": "passed",
-          "title": "it should be valid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: shortName"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: shortName it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 70
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: description"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: description it should be valid if null",
-          "location": {
-            "column": 4,
-            "line": 80
-          },
-          "status": "passed",
-          "title": "it should be valid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: description"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: description it should be valid if empty",
-          "location": {
-            "column": 4,
-            "line": 86
-          },
-          "status": "passed",
-          "title": "it should be valid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: noBudgetMessage"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: noBudgetMessage it should be valid if null",
-          "location": {
-            "column": 4,
-            "line": 94
-          },
-          "status": "passed",
-          "title": "it should be valid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: noBudgetMessage"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: noBudgetMessage it should be valid if empty",
-          "location": {
-            "column": 4,
-            "line": 100
-          },
-          "status": "passed",
-          "title": "it should be valid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: position"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: position it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 108
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: position"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: position it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 116
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: active"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: active it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 126
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: active"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: active it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 134
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: displayInReport"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: displayInReport it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 144
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "property: displayInReport"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model property: displayInReport it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 152
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "scope: active"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model scope: active it should include active service groups",
-          "location": {
-            "column": 4,
-            "line": 162
-          },
-          "status": "passed",
-          "title": "it should include active service groups"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "scope: active"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model scope: active it should not include inactive service groups",
-          "location": {
-            "column": 4,
-            "line": 172
-          },
-          "status": "passed",
-          "title": "it should not include inactive service groups"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "scope: displayInReport"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model scope: displayInReport it should include displayed service groups",
-          "location": {
-            "column": 4,
-            "line": 184
-          },
-          "status": "passed",
-          "title": "it should include displayed service groups"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group model",
-            "scope: displayInReport"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group model scope: displayInReport it should not include non-displayed service groups",
-          "location": {
-            "column": 4,
-            "line": 194
-          },
-          "status": "passed",
-          "title": "it should not include non-displayed service groups"
-        }
-      ],
-      "endTime": 1655631634011,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/serviceGroup.spec.js",
-      "startTime": 1655631632999,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Report helper"
-          ],
-          "failureMessages": [],
-          "fullName": "Report helper should return all budgets for tenant",
-          "location": {
-            "column": 2,
-            "line": 10
-          },
-          "status": "passed",
-          "title": "should return all budgets for tenant"
-        },
-        {
-          "ancestorTitles": [
-            "Report helper",
-            "service/service group filters",
-            "services"
-          ],
-          "failureMessages": [],
-          "fullName": "Report helper service/service group filters services should return all budgets for service",
-          "location": {
-            "column": 6,
-            "line": 28
-          },
-          "status": "passed",
-          "title": "should return all budgets for service"
-        },
-        {
-          "ancestorTitles": [
-            "Report helper",
-            "service/service group filters",
-            "services"
-          ],
-          "failureMessages": [],
-          "fullName": "Report helper service/service group filters services should not return budgets from a different service",
-          "location": {
-            "column": 6,
-            "line": 43
-          },
-          "status": "passed",
-          "title": "should not return budgets from a different service"
-        },
-        {
-          "ancestorTitles": [
-            "Report helper",
-            "service/service group filters",
-            "serviceGroups"
-          ],
-          "failureMessages": [],
-          "fullName": "Report helper service/service group filters serviceGroups should return all budgets for serviceGroup",
-          "location": {
-            "column": 6,
-            "line": 61
-          },
-          "status": "passed",
-          "title": "should return all budgets for serviceGroup"
-        },
-        {
-          "ancestorTitles": [
-            "Report helper",
-            "service/service group filters",
-            "serviceGroups"
-          ],
-          "failureMessages": [],
-          "fullName": "Report helper service/service group filters serviceGroups should not return budgets from a different service Group",
-          "location": {
-            "column": 6,
-            "line": 76
-          },
-          "status": "passed",
-          "title": "should not return budgets from a different service Group"
-        },
-        {
-          "ancestorTitles": [
-            "Report helper",
-            "clientId filter"
-          ],
-          "failureMessages": [],
-          "fullName": "Report helper clientId filter should return all budgets for clientId",
-          "location": {
-            "column": 4,
-            "line": 95
-          },
-          "status": "passed",
-          "title": "should return all budgets for clientId"
-        },
-        {
-          "ancestorTitles": [
-            "Report helper",
-            "clientId filter"
-          ],
-          "failureMessages": [],
-          "fullName": "Report helper clientId filter should not return budgets for a different clientId",
-          "location": {
-            "column": 4,
-            "line": 108
-          },
-          "status": "passed",
-          "title": "should not return budgets for a different clientId"
-        },
-        {
-          "ancestorTitles": [
-            "Report helper",
-            "date scope",
-            "active"
-          ],
-          "failureMessages": [],
-          "fullName": "Report helper date scope active should return active budgets for current month",
-          "location": {
-            "column": 6,
-            "line": 136
-          },
-          "status": "passed",
-          "title": "should return active budgets for current month"
-        },
-        {
-          "ancestorTitles": [
-            "Report helper",
-            "date scope",
-            "active"
-          ],
-          "failureMessages": [],
-          "fullName": "Report helper date scope active should return active budgets for previous month which should be empty",
-          "location": {
-            "column": 6,
-            "line": 148
-          },
-          "status": "passed",
-          "title": "should return active budgets for previous month which should be empty"
-        },
-        {
-          "ancestorTitles": [
-            "Report helper",
-            "date scope",
-            "inactive"
-          ],
-          "failureMessages": [],
-          "fullName": "Report helper date scope inactive should return all inactive budgets",
-          "location": {
-            "column": 6,
-            "line": 161
-          },
-          "status": "passed",
-          "title": "should return all inactive budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Report helper",
-            "date scope",
-            "inactive"
-          ],
-          "failureMessages": [],
-          "fullName": "Report helper date scope inactive should not return active budgets",
-          "location": {
-            "column": 6,
-            "line": 187
-          },
-          "status": "passed",
-          "title": "should not return active budgets"
-        }
-      ],
-      "endTime": 1655631635117,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/report-helper.spec.js",
-      "startTime": 1655631634026,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "OEM Budget model"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 7
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "relationships: service"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model relationships: service it should belong to a service",
-          "location": {
-            "column": 4,
-            "line": 14
-          },
-          "status": "passed",
-          "title": "it should belong to a service"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "relationships: service"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model relationships: service it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 21
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "relationships: profitCenter"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model relationships: profitCenter it should belong to a Profit Center",
-          "location": {
-            "column": 4,
-            "line": 31
-          },
-          "status": "passed",
-          "title": "it should belong to a Profit Center"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "relationships: profitCenter"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model relationships: profitCenter it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 38
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model property: tenantId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 48
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model property: tenantId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 56
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "property: clientId"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model property: clientId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 66
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "property: clientId"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model property: clientId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 74
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "property: month"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model property: month it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 84
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "property: month"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model property: month it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 92
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "property: month"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model property: month it should be invalid if not date",
-          "location": {
-            "column": 4,
-            "line": 100
-          },
-          "status": "passed",
-          "title": "it should be invalid if not date"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "property: amount"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model property: amount it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 110
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "property: amount"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model property: amount it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 118
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "property: isHeavyUp"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model property: isHeavyUp it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 128
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "property: isHeavyUp"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model property: isHeavyUp it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 136
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "scope: forDate"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model scope: forDate it should include rollovers for the provided date",
-          "location": {
-            "column": 4,
-            "line": 146
-          },
-          "status": "passed",
-          "title": "it should include rollovers for the provided date"
-        },
-        {
-          "ancestorTitles": [
-            "OEM Budget model",
-            "scope: forDate"
-          ],
-          "failureMessages": [],
-          "fullName": "OEM Budget model scope: forDate it should include not rollovers outside of the provided date",
-          "location": {
-            "column": 4,
-            "line": 154
-          },
-          "status": "passed",
-          "title": "it should include not rollovers outside of the provided date"
-        }
-      ],
-      "endTime": 1655631636121,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/oemBudget.spec.js",
-      "startTime": 1655631635136,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Rollover model"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 7
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "Rollover model",
-            "relationship: service"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model relationship: service it should belong to a service",
-          "location": {
-            "column": 4,
-            "line": 14
-          },
-          "status": "passed",
-          "title": "it should belong to a service"
-        },
-        {
-          "ancestorTitles": [
-            "Rollover model",
-            "relationship: service"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model relationship: service it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 21
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Rollover model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model property: tenantId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 31
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Rollover model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model property: tenantId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 39
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Rollover model",
-            "property: clientId"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model property: clientId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 49
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Rollover model",
-            "property: clientId"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model property: clientId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 57
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Rollover model",
-            "property: updatedByUser"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model property: updatedByUser it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 67
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Rollover model",
-            "property: updatedByUser"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model property: updatedByUser it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 75
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Rollover model",
-            "property: month"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model property: month it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 85
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Rollover model",
-            "property: month"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model property: month it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 93
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Rollover model",
-            "property: amount"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model property: amount it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 103
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Rollover model",
-            "property: amount"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model property: amount it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 111
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Rollover model",
-            "scope: forDate"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model scope: forDate it should include rollovers for the provided date",
-          "location": {
-            "column": 4,
-            "line": 121
-          },
-          "status": "passed",
-          "title": "it should include rollovers for the provided date"
-        },
-        {
-          "ancestorTitles": [
-            "Rollover model",
-            "scope: forDate"
-          ],
-          "failureMessages": [],
-          "fullName": "Rollover model scope: forDate it should include not rollovers outside of the provided date",
-          "location": {
-            "column": 4,
-            "line": 129
-          },
-          "status": "passed",
-          "title": "it should include not rollovers outside of the provided date"
-        }
-      ],
-      "endTime": 1655631637241,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/rollover.spec.js",
-      "startTime": 1655631636138,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Categorized spend model"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 6
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "Categorized spend model",
-            "relationship: service"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model relationship: service it should belong to a service",
-          "location": {
-            "column": 4,
-            "line": 13
-          },
-          "status": "passed",
-          "title": "it should belong to a service"
-        },
-        {
-          "ancestorTitles": [
-            "Categorized spend model",
-            "relationship: service"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model relationship: service it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 20
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Categorized spend model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model property: tenantId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 30
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Categorized spend model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model property: tenantId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 38
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Categorized spend model",
-            "property: identifier"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model property: identifier it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 48
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Categorized spend model",
-            "property: identifier"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model property: identifier it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 56
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Categorized spend model",
-            "property: spendType"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model property: spendType it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 66
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Categorized spend model",
-            "property: spendType"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model property: spendType it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 74
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Categorized spend model",
-            "property: spendTypeIdentifier"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model property: spendTypeIdentifier it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 84
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Categorized spend model",
-            "property: spendTypeIdentifier"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model property: spendTypeIdentifier it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 92
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Categorized spend model",
-            "property: date"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model property: date it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 102
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Categorized spend model",
-            "property: date"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model property: date it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 110
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Categorized spend model",
-            "property: amount"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model property: amount it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 120
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Categorized spend model",
-            "property: amount"
-          ],
-          "failureMessages": [],
-          "fullName": "Categorized spend model property: amount it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 128
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        }
-      ],
-      "endTime": 1655631638624,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/categorizedSpend.spec.js",
-      "startTime": 1655631637256,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Profit Center controller",
-            "GET /"
-          ],
-          "failureMessages": [],
-          "fullName": "Profit Center controller GET / it should return all profit centers for tenant",
-          "location": {
-            "column": 4,
-            "line": 18
-          },
-          "status": "passed",
-          "title": "it should return all profit centers for tenant"
-        },
-        {
-          "ancestorTitles": [
-            "Profit Center controller",
-            "POST /"
-          ],
-          "failureMessages": [],
-          "fullName": "Profit Center controller POST / it should create profit centers for tenant",
-          "location": {
-            "column": 4,
-            "line": 47
-          },
-          "status": "passed",
-          "title": "it should create profit centers for tenant"
-        },
-        {
-          "ancestorTitles": [
-            "Profit Center controller",
-            "PUT /"
-          ],
-          "failureMessages": [],
-          "fullName": "Profit Center controller PUT / it should create profit centers for tenant",
-          "location": {
-            "column": 4,
-            "line": 63
-          },
-          "status": "passed",
-          "title": "it should create profit centers for tenant"
-        },
-        {
-          "ancestorTitles": [
-            "Profit Center controller",
-            "DELETE /:id"
-          ],
-          "failureMessages": [],
-          "fullName": "Profit Center controller DELETE /:id it should delete profit centers for tenant",
-          "location": {
-            "column": 4,
-            "line": 79
-          },
-          "status": "passed",
-          "title": "it should delete profit centers for tenant"
-        },
-        {
-          "ancestorTitles": [
-            "Profit Center controller",
-            "DELETE /:id"
-          ],
-          "failureMessages": [],
-          "fullName": "Profit Center controller DELETE /:id it should return an error if the profit center does not exist",
-          "location": {
-            "column": 4,
-            "line": 91
-          },
-          "status": "passed",
-          "title": "it should return an error if the profit center does not exist"
-        },
-        {
-          "ancestorTitles": [
-            "Profit Center controller",
-            "GET /getByManufacturerId/:manufacturerId"
-          ],
-          "failureMessages": [],
-          "fullName": "Profit Center controller GET /getByManufacturerId/:manufacturerId it should return all profit centers for tenant and manufacturer",
-          "location": {
-            "column": 4,
-            "line": 99
-          },
-          "status": "passed",
-          "title": "it should return all profit centers for tenant and manufacturer"
-        }
-      ],
-      "endTime": 1655631641789,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/integration/profitCenter.spec.js",
-      "startTime": 1655631638663,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "SectionSpendNote model"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionSpendNote model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 5
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "SectionSpendNote model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionSpendNote model property: tenantId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 12
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "SectionSpendNote model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionSpendNote model property: tenantId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 20
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "SectionSpendNote model",
-            "property: sectionId"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionSpendNote model property: sectionId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 30
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "SectionSpendNote model",
-            "property: sectionId"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionSpendNote model property: sectionId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 38
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "SectionSpendNote model",
-            "property: clientId"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionSpendNote model property: clientId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 48
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "SectionSpendNote model",
-            "property: clientId"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionSpendNote model property: clientId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 56
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "SectionSpendNote model",
-            "property: userId"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionSpendNote model property: userId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 66
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "SectionSpendNote model",
-            "property: userId"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionSpendNote model property: userId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 74
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "SectionSpendNote model",
-            "property: month"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionSpendNote model property: month it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 84
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "SectionSpendNote model",
-            "property: month"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionSpendNote model property: month it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 92
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "SectionSpendNote model",
-            "property: note"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionSpendNote model property: note it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 102
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "SectionSpendNote model",
-            "property: note"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionSpendNote model property: note it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 110
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        }
-      ],
-      "endTime": 1655631643313,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/sectionSpendNote.spec.js",
-      "startTime": 1655631641872,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Tag model"
-          ],
-          "failureMessages": [],
-          "fullName": "Tag model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 6
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "Tag model",
-            "relationshop: budgets"
-          ],
-          "failureMessages": [],
-          "fullName": "Tag model relationshop: budgets it should have many budgets",
-          "location": {
-            "column": 4,
-            "line": 13
-          },
-          "status": "passed",
-          "title": "it should have many budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Tag model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Tag model property: tenantId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 27
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Tag model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Tag model property: tenantId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 35
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Tag model",
-            "property: name"
-          ],
-          "failureMessages": [],
-          "fullName": "Tag model property: name it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 45
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Tag model",
-            "property: name"
-          ],
-          "failureMessages": [],
-          "fullName": "Tag model property: name it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 53
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Tag model",
-            "property: name"
-          ],
-          "failureMessages": [],
-          "fullName": "Tag model property: name it should unique by tenant",
-          "location": {
-            "column": 4,
-            "line": 61
-          },
-          "status": "passed",
-          "title": "it should unique by tenant"
-        },
-        {
-          "ancestorTitles": [
-            "Tag model",
-            "property: description"
-          ],
-          "failureMessages": [],
-          "fullName": "Tag model property: description it should be valid if null",
-          "location": {
-            "column": 4,
-            "line": 76
-          },
-          "status": "passed",
-          "title": "it should be valid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Tag model",
-            "property: description"
-          ],
-          "failureMessages": [],
-          "fullName": "Tag model property: description it should be valid if empty",
-          "location": {
-            "column": 4,
-            "line": 82
-          },
-          "status": "passed",
-          "title": "it should be valid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Tag model",
-            "property: includeFees"
-          ],
-          "failureMessages": [],
-          "fullName": "Tag model property: includeFees it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 90
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Tag model",
-            "property: includeFees"
-          ],
-          "failureMessages": [],
-          "fullName": "Tag model property: includeFees it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 98
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Tag model",
-            "property: hasCampaignAssociated"
-          ],
-          "failureMessages": [],
-          "fullName": "Tag model property: hasCampaignAssociated it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 108
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Tag model",
-            "property: hasCampaignAssociated"
-          ],
-          "failureMessages": [],
-          "fullName": "Tag model property: hasCampaignAssociated it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 116
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        }
-      ],
-      "endTime": 1655631644341,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/tag.spec.js",
-      "startTime": 1655631643337,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Fee Service model"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee Service model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 6
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "Fee Service model",
-            "relationship: service"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee Service model relationship: service it should belong to a service",
-          "location": {
-            "column": 4,
-            "line": 13
-          },
-          "status": "passed",
-          "title": "it should belong to a service"
-        },
-        {
-          "ancestorTitles": [
-            "Fee Service model",
-            "relationship: fees"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee Service model relationship: fees it should have many fees",
-          "location": {
-            "column": 4,
-            "line": 22
-          },
-          "status": "passed",
-          "title": "it should have many fees"
-        },
-        {
-          "ancestorTitles": [
-            "Fee Service model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee Service model property: tenantId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 36
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee Service model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee Service model property: tenantId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 44
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Fee Service model",
-            "property: name"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee Service model property: name it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 54
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee Service model",
-            "property: name"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee Service model property: name it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 62
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Fee Service model",
-            "property: description"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee Service model property: description it should be valid if null",
-          "location": {
-            "column": 4,
-            "line": 72
-          },
-          "status": "passed",
-          "title": "it should be valid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee Service model",
-            "property: description"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee Service model property: description it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 78
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Fee Service model",
-            "property: isPercentage"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee Service model property: isPercentage it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 88
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Fee Service model",
-            "property: isPercentage"
-          ],
-          "failureMessages": [],
-          "fullName": "Fee Service model property: isPercentage it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 96
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        }
-      ],
-      "endTime": 1655631645475,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/feeService.spec.js",
-      "startTime": 1655631644356,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Service Group Controller"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group Controller It should create a service group and return it",
-          "location": {
-            "column": 2,
-            "line": 16
-          },
-          "status": "passed",
-          "title": "It should create a service group and return it"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group Controller"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group Controller It should not create a service group without required fields",
-          "location": {
-            "column": 2,
-            "line": 43
-          },
-          "status": "passed",
-          "title": "It should not create a service group without required fields"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group Controller"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group Controller It should not create a service group with an existing tenant and name",
-          "location": {
-            "column": 2,
-            "line": 61
-          },
-          "status": "passed",
-          "title": "It should not create a service group with an existing tenant and name"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group Controller"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group Controller It should not create a service group with an existing position",
-          "location": {
-            "column": 2,
-            "line": 72
-          },
-          "status": "passed",
-          "title": "It should not create a service group with an existing position"
-        },
-        {
-          "ancestorTitles": [
-            "Service Group Controller"
-          ],
-          "failureMessages": [],
-          "fullName": "Service Group Controller It should not create a service group with an existing short name",
-          "location": {
-            "column": 2,
-            "line": 83
-          },
-          "status": "passed",
-          "title": "It should not create a service group with an existing short name"
-        }
-      ],
-      "endTime": 1655631646766,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/integration/serviceGroup.spec.js",
-      "startTime": 1655631645487,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Spend model"
-          ],
-          "failureMessages": [],
-          "fullName": "Spend model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 6
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "Spend model",
-            "relationship: service"
-          ],
-          "failureMessages": [],
-          "fullName": "Spend model relationship: service it should belong to a service",
-          "location": {
-            "column": 4,
-            "line": 13
-          },
-          "status": "passed",
-          "title": "it should belong to a service"
-        },
-        {
-          "ancestorTitles": [
-            "Spend model",
-            "relationship: service"
-          ],
-          "failureMessages": [],
-          "fullName": "Spend model relationship: service it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 20
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Spend model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Spend model property: tenantId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 30
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Spend model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Spend model property: tenantId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 38
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Spend model",
-            "property: identifier"
-          ],
-          "failureMessages": [],
-          "fullName": "Spend model property: identifier it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 48
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Spend model",
-            "property: identifier"
-          ],
-          "failureMessages": [],
-          "fullName": "Spend model property: identifier it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 56
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Spend model",
-            "property: date"
-          ],
-          "failureMessages": [],
-          "fullName": "Spend model property: date it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 66
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Spend model",
-            "property: date"
-          ],
-          "failureMessages": [],
-          "fullName": "Spend model property: date it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 74
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Spend model",
-            "property: amount"
-          ],
-          "failureMessages": [],
-          "fullName": "Spend model property: amount it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 84
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Spend model",
-            "property: amount"
-          ],
-          "failureMessages": [],
-          "fullName": "Spend model property: amount it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 92
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        }
-      ],
-      "endTime": 1655631647670,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/spend.spec.js",
-      "startTime": 1655631646827,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Profit Center model"
-          ],
-          "failureMessages": [],
-          "fullName": "Profit Center model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 6
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "Profit Center model",
-            "relationship: oemBudgets"
-          ],
-          "failureMessages": [],
-          "fullName": "Profit Center model relationship: oemBudgets it should have many OEM budgets",
-          "location": {
-            "column": 4,
-            "line": 13
-          },
-          "status": "passed",
-          "title": "it should have many OEM budgets"
-        },
-        {
-          "ancestorTitles": [
-            "Profit Center model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Profit Center model property: tenantId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 27
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Profit Center model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Profit Center model property: tenantId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 35
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Profit Center model",
-            "property: name"
-          ],
-          "failureMessages": [],
-          "fullName": "Profit Center model property: name it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 45
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Profit Center model",
-            "property: name"
-          ],
-          "failureMessages": [],
-          "fullName": "Profit Center model property: name it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 53
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Profit Center model",
-            "property: manufacturerId"
-          ],
-          "failureMessages": [],
-          "fullName": "Profit Center model property: manufacturerId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 63
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Profit Center model",
-            "property: manufacturerId"
-          ],
-          "failureMessages": [],
-          "fullName": "Profit Center model property: manufacturerId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 71
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        }
-      ],
-      "endTime": 1655631648434,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/profitCenter.spec.js",
-      "startTime": 1655631647680,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "ServiceProfileType model"
-          ],
-          "failureMessages": [],
-          "fullName": "ServiceProfileType model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 5
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "ServiceProfileType model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "ServiceProfileType model property: tenantId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 12
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "ServiceProfileType model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "ServiceProfileType model property: tenantId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 20
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "ServiceProfileType model",
-            "property: serviceId"
-          ],
-          "failureMessages": [],
-          "fullName": "ServiceProfileType model property: serviceId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 30
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "ServiceProfileType model",
-            "property: serviceId"
-          ],
-          "failureMessages": [],
-          "fullName": "ServiceProfileType model property: serviceId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 38
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "ServiceProfileType model",
-            "property: profileTypeId"
-          ],
-          "failureMessages": [],
-          "fullName": "ServiceProfileType model property: profileTypeId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 48
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "ServiceProfileType model",
-            "property: profileTypeId"
-          ],
-          "failureMessages": [],
-          "fullName": "ServiceProfileType model property: profileTypeId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 56
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        }
-      ],
-      "endTime": 1655631649211,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/serviceProfileType.spec.js",
-      "startTime": 1655631648444,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Section model"
-          ],
-          "failureMessages": [],
-          "fullName": "Section model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 5
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "Section model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Section model property: tenantId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 12
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Section model",
-            "property: tenantId"
-          ],
-          "failureMessages": [],
-          "fullName": "Section model property: tenantId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 20
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Section model",
-            "property: name"
-          ],
-          "failureMessages": [],
-          "fullName": "Section model property: name it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 30
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Section model",
-            "property: name"
-          ],
-          "failureMessages": [],
-          "fullName": "Section model property: name it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 38
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "Section model",
-            "property: sectionClientUserTypeId"
-          ],
-          "failureMessages": [],
-          "fullName": "Section model property: sectionClientUserTypeId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 48
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "Section model",
-            "property: sectionClientUserTypeId"
-          ],
-          "failureMessages": [],
-          "fullName": "Section model property: sectionClientUserTypeId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 56
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        }
-      ],
-      "endTime": 1655631649994,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/section.spec.js",
-      "startTime": 1655631649221,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Spend Audit Helper"
-          ],
-          "failureMessages": [],
-          "fullName": "Spend Audit Helper calculateTotalSpends should delete existing records before calculating new ones",
-          "location": {
-            "column": 2,
-            "line": 9
-          },
-          "status": "passed",
-          "title": "calculateTotalSpends should delete existing records before calculating new ones"
-        },
-        {
-          "ancestorTitles": [
-            "Spend Audit Helper"
-          ],
-          "failureMessages": [],
-          "fullName": "Spend Audit Helper calculateCategorizedSpends should delete existing records before calculating new ones",
-          "location": {
-            "column": 2,
-            "line": 21
-          },
-          "status": "passed",
-          "title": "calculateCategorizedSpends should delete existing records before calculating new ones"
-        }
-      ],
-      "endTime": 1655631650907,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/spend_audit.helper.spec.js",
-      "startTime": 1655631650004,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "SectionService model"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionService model it should save with valid attributes",
-          "location": {
-            "column": 2,
-            "line": 5
-          },
-          "status": "passed",
-          "title": "it should save with valid attributes"
-        },
-        {
-          "ancestorTitles": [
-            "SectionService model",
-            "property: sectionId"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionService model property: sectionId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 12
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "SectionService model",
-            "property: sectionId"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionService model property: sectionId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 20
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        },
-        {
-          "ancestorTitles": [
-            "SectionService model",
-            "property: serviceId"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionService model property: serviceId it should be invalid if null",
-          "location": {
-            "column": 4,
-            "line": 30
-          },
-          "status": "passed",
-          "title": "it should be invalid if null"
-        },
-        {
-          "ancestorTitles": [
-            "SectionService model",
-            "property: serviceId"
-          ],
-          "failureMessages": [],
-          "fullName": "SectionService model property: serviceId it should be invalid if empty",
-          "location": {
-            "column": 4,
-            "line": 38
-          },
-          "status": "passed",
-          "title": "it should be invalid if empty"
-        }
-      ],
-      "endTime": 1655631651857,
-      "message": "",
-      "name": "/Users/hcancelik/Sites/chd-portal/AccountingService/tests/unit/sectionService.spec.js",
-      "startTime": 1655631650940,
-      "status": "passed",
-      "summary": ""
+      "message": "Results are redacted."
     }
   ],
   "wasInterrupted": false,
   "coverageMap": {
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/budget.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/budget.model.js",
+    "/foo/bar/models/budget.model.js": {
+      "path": "/foo/bar/models/budget.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -6331,8 +1913,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "6efdf461fa513e2bc0272734fcbce9c7264d51cb"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/budget_change.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/budget_change.model.js",
+    "/foo/bar/models/budget_change.model.js": {
+      "path": "/foo/bar/models/budget_change.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -6451,8 +2033,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "fca419231a5c4da764cfef6345fd8a24e18f1213"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/budget_tag.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/budget_tag.model.js",
+    "/foo/bar/models/budget_tag.model.js": {
+      "path": "/foo/bar/models/budget_tag.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -6582,8 +2164,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "bb5a62fd3611067f37af9e0cb91f75400338c8b3"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/categorized_spend.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/categorized_spend.model.js",
+    "/foo/bar/models/categorized_spend.model.js": {
+      "path": "/foo/bar/models/categorized_spend.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -6724,8 +2306,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "e151860681d84dce864ecd34bf64975550396807"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/fee.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/fee.model.js",
+    "/foo/bar/models/fee.model.js": {
+      "path": "/foo/bar/models/fee.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -7505,8 +3087,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "f67c5d7a9ff04f859ee50004b01a1abc3b17875a"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/fee_service.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/fee_service.model.js",
+    "/foo/bar/models/fee_service.model.js": {
+      "path": "/foo/bar/models/fee_service.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -7658,8 +3240,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "4165e09da2c0bcc2b3cb7bc49ff5a199d1edd0d8"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/oem_budget.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/oem_budget.model.js",
+    "/foo/bar/models/oem_budget.model.js": {
+      "path": "/foo/bar/models/oem_budget.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -7858,8 +3440,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "b365be105e6c64356fb10f90c499117d271d2f77"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/profit_center.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/profit_center.model.js",
+    "/foo/bar/models/profit_center.model.js": {
+      "path": "/foo/bar/models/profit_center.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -8000,8 +3582,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "b7273b11baa56d438b8f9d7bbd3affcd43292303"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/rollover.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/rollover.model.js",
+    "/foo/bar/models/rollover.model.js": {
+      "path": "/foo/bar/models/rollover.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -8189,8 +3771,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "e117fc71e478b6b87bc2903948d044860459af4b"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/section.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/section.model.js",
+    "/foo/bar/models/section.model.js": {
+      "path": "/foo/bar/models/section.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -8320,8 +3902,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "42241014aa778f2c6abfd6c1a2e0098525f6c41c"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/section_budget_change.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/section_budget_change.model.js",
+    "/foo/bar/models/section_budget_change.model.js": {
+      "path": "/foo/bar/models/section_budget_change.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -8440,8 +4022,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "6c9978d69a64ab6fe3126affbc7c0367542ca3e9"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/section_service.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/section_service.model.js",
+    "/foo/bar/models/section_service.model.js": {
+      "path": "/foo/bar/models/section_service.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -8502,8 +4084,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "7ee955165132fc1e02c51947d4a5e51348b7db40"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/section_spend_note.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/section_spend_note.model.js",
+    "/foo/bar/models/section_spend_note.model.js": {
+      "path": "/foo/bar/models/section_spend_note.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -8633,8 +4215,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "c89099cb502c0fac39f458a913988c47a875bef4"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/service.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/service.model.js",
+    "/foo/bar/models/service.model.js": {
+      "path": "/foo/bar/models/service.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -8981,8 +4563,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "6e92b87af24aed94e83f102ba32797444a764ea5"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/service_group.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/service_group.model.js",
+    "/foo/bar/models/service_group.model.js": {
+      "path": "/foo/bar/models/service_group.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -9195,8 +4777,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "3c3990091a6d2e80d746594ad1a6ec09840047a8"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/service_profile_type.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/service_profile_type.model.js",
+    "/foo/bar/models/service_profile_type.model.js": {
+      "path": "/foo/bar/models/service_profile_type.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -9257,8 +4839,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "b7c7f32744b0b60e54fb8aa472a538f3de485aca"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/spend.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/spend.model.js",
+    "/foo/bar/models/spend.model.js": {
+      "path": "/foo/bar/models/spend.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -9388,8 +4970,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "7426f8f755e7906f1d6a176d44502b3ecd860648"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/spend_data_source.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/spend_data_source.model.js",
+    "/foo/bar/models/spend_data_source.model.js": {
+      "path": "/foo/bar/models/spend_data_source.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -9508,8 +5090,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "503617986992de6ae92cc7ac1c9ba8e0a96336c1"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/models/tag.model.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/models/tag.model.js",
+    "/foo/bar/models/tag.model.js": {
+      "path": "/foo/bar/models/tag.model.js",
       "statementMap": {
         "0": {
           "start": {
@@ -9639,8 +5221,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "1f24b34a5cbc2de728f177f0453e3b1032dd259a"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/report.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/report.js",
+    "/foo/bar/helpers/report.js": {
+      "path": "/foo/bar/helpers/report.js",
       "statementMap": {
         "0": {
           "start": {
@@ -11650,8 +7232,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "b4f10e9d1b1e9e57f98010b407337621f502de69"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/spend_audit.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/spend_audit.js",
+    "/foo/bar/helpers/spend_audit.js": {
+      "path": "/foo/bar/helpers/spend_audit.js",
       "statementMap": {
         "0": {
           "start": {
@@ -13229,8 +8811,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "2f967ffbc75fbf3da4ba44a8d3dc28cdac5401ac"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/services/reporting.service.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/services/reporting.service.js",
+    "/foo/bar/services/reporting.service.js": {
+      "path": "/foo/bar/services/reporting.service.js",
       "statementMap": {
         "0": {
           "start": {
@@ -13526,8 +9108,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "a36f2fb45336f8992a5d480c9b2cf76fceedb422"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/budget_tracker.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/budget_tracker.js",
+    "/foo/bar/helpers/budget_tracker.js": {
+      "path": "/foo/bar/helpers/budget_tracker.js",
       "statementMap": {
         "0": {
           "start": {
@@ -13991,8 +9573,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "e8f81cbe3de00161c753760efe24c0a5d5f93010"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/section_budget_tracker.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/section_budget_tracker.js",
+    "/foo/bar/helpers/section_budget_tracker.js": {
+      "path": "/foo/bar/helpers/section_budget_tracker.js",
       "statementMap": {
         "0": {
           "start": {
@@ -14536,8 +10118,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "50e29f6a840b8f126848baa4c4471a864d2c4fee"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/rolloverV2.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/rolloverV2.js",
+    "/foo/bar/helpers/rolloverV2.js": {
+      "path": "/foo/bar/helpers/rolloverV2.js",
       "statementMap": {
         "0": {
           "start": {
@@ -16435,8 +12017,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "01eec8cb047b87de4e01fbaea2d4802f07c8e126"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/services/authentication.service.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/services/authentication.service.js",
+    "/foo/bar/services/authentication.service.js": {
+      "path": "/foo/bar/services/authentication.service.js",
       "statementMap": {
         "0": {
           "start": {
@@ -16624,8 +12206,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "0eb3f164b04c4ce83fd78fe7bf4a3700b6343ef5"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/services/client.service.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/services/client.service.js",
+    "/foo/bar/services/client.service.js": {
+      "path": "/foo/bar/services/client.service.js",
       "statementMap": {
         "0": {
           "start": {
@@ -17496,8 +13078,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "5e0d6f4f084f66afa4abe53f22ac00a6696cc3eb"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/runWithRedisLock.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/runWithRedisLock.js",
+    "/foo/bar/helpers/runWithRedisLock.js": {
+      "path": "/foo/bar/helpers/runWithRedisLock.js",
       "statementMap": {
         "0": {
           "start": {
@@ -18037,8 +13619,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "d7283d02e3647b4c789925cb4f88cf4c895c4ff0"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/service_group.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/service_group.router.js",
+    "/foo/bar/routers/service_group.router.js": {
+      "path": "/foo/bar/routers/service_group.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -18176,8 +13758,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "76eb64dc081c85aad4001d01b2d01fe6dba043ad"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/service_groups.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/service_groups.controller.js",
+    "/foo/bar/controllers/service_groups.controller.js": {
+      "path": "/foo/bar/controllers/service_groups.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -20358,8 +15940,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "c612611837345c9ec0176e2012a048ebcce77937"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/error.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/error.js",
+    "/foo/bar/helpers/error.js": {
+      "path": "/foo/bar/helpers/error.js",
       "statementMap": {
         "0": {
           "start": {
@@ -21001,8 +16583,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "b3be5929afe5ba299bb0b182dccafb4cd81bae5a"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/service.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/service.router.js",
+    "/foo/bar/routers/service.router.js": {
+      "path": "/foo/bar/routers/service.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -21184,8 +16766,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "e07fd60df43edba93696c54c71721f2c3bdd4496"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/service.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/service.controller.js",
+    "/foo/bar/controllers/service.controller.js": {
+      "path": "/foo/bar/controllers/service.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -23356,8 +18938,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "2520d0fa0530eab905808d11ed3eee5c68bcd55f"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/budget.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/budget.router.js",
+    "/foo/bar/routers/budget.router.js": {
+      "path": "/foo/bar/routers/budget.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -23660,8 +19242,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "e99b2a0bdfea91e679a070c35a140e309e23d701"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/budget.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/budget.controller.js",
+    "/foo/bar/controllers/budget.controller.js": {
+      "path": "/foo/bar/controllers/budget.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -32190,8 +27772,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "af4d1be1012900ab9efc9b0cc04c4db99fea5489"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/services/budget.service.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/services/budget.service.js",
+    "/foo/bar/services/budget.service.js": {
+      "path": "/foo/bar/services/budget.service.js",
       "statementMap": {
         "0": {
           "start": {
@@ -32332,8 +27914,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "81193eeffd5e89940ac37156966fe785b302acad"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/client.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/client.router.js",
+    "/foo/bar/routers/client.router.js": {
+      "path": "/foo/bar/routers/client.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -32515,8 +28097,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "c37360170a2d52614947ed69447b5a5d3cb39768"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/report.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/report.controller.js",
+    "/foo/bar/controllers/report.controller.js": {
+      "path": "/foo/bar/controllers/report.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -40207,8 +35789,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "25aba02abc48ca14139848d79aeca4f7518b3f4a"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/budget.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/budget.js",
+    "/foo/bar/helpers/budget.js": {
+      "path": "/foo/bar/helpers/budget.js",
       "statementMap": {
         "0": {
           "start": {
@@ -40982,8 +36564,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "cb42534790e3449b36e03cc31f5f52376b9c38a5"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/report.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/report.router.js",
+    "/foo/bar/routers/report.router.js": {
+      "path": "/foo/bar/routers/report.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -41187,8 +36769,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "3b1af7c2ed70bca5660e24c1890bd3c814639bbf"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/fee_service.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/fee_service.router.js",
+    "/foo/bar/routers/fee_service.router.js": {
+      "path": "/foo/bar/routers/fee_service.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -41337,8 +36919,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "0d8250799f586a9f39438d0607c6ecd92e256df9"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/fee_service.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/fee_service.controller.js",
+    "/foo/bar/controllers/fee_service.controller.js": {
+      "path": "/foo/bar/controllers/fee_service.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -42163,8 +37745,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "a3e91e34b67f8ab06d1b0fe0dd0c42341180328e"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/fee.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/fee.router.js",
+    "/foo/bar/routers/fee.router.js": {
+      "path": "/foo/bar/routers/fee.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -42302,8 +37884,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "20e9b66eb7795972a251c959a89ebd29f3740a31"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/fee.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/fee.controller.js",
+    "/foo/bar/controllers/fee.controller.js": {
+      "path": "/foo/bar/controllers/fee.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -43628,8 +39210,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "703f6ee7fd916d979b5d9d974a3c1343823b07ed"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/rollover.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/rollover.router.js",
+    "/foo/bar/routers/rollover.router.js": {
+      "path": "/foo/bar/routers/rollover.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -43756,8 +39338,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "ff5b6065d400a80531c1683b36ee075e26bf3edc"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/rollover.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/rollover.controller.js",
+    "/foo/bar/controllers/rollover.controller.js": {
+      "path": "/foo/bar/controllers/rollover.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -44651,8 +40233,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "ef91e4f902bfaf0e8188e986ed3422d9fc95f76d"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/oem_budget.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/oem_budget.router.js",
+    "/foo/bar/routers/oem_budget.router.js": {
+      "path": "/foo/bar/routers/oem_budget.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -44757,8 +40339,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "dea85cfb49c6e2d92072b233f59a64c13b5970c5"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/oem_budget.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/oem_budget.controller.js",
+    "/foo/bar/controllers/oem_budget.controller.js": {
+      "path": "/foo/bar/controllers/oem_budget.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -45466,8 +41048,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "21d4b44658d9271691d14c7f40c3882582ba8c0b"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/profit_center.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/profit_center.router.js",
+    "/foo/bar/routers/profit_center.router.js": {
+      "path": "/foo/bar/routers/profit_center.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -45605,8 +41187,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "a75d90ad57d275b28135c34bc6f2b3c11eb74d8c"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/profit_center.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/profit_center.controller.js",
+    "/foo/bar/controllers/profit_center.controller.js": {
+      "path": "/foo/bar/controllers/profit_center.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -46405,8 +41987,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "6be298f3df12f6f722e99e64c1b8644900d3d012"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/budget_change.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/budget_change.router.js",
+    "/foo/bar/routers/budget_change.router.js": {
+      "path": "/foo/bar/routers/budget_change.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -46511,8 +42093,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "eac81dd54f34c3b7588cc92da439b9e1c7c0be6b"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/budget_change.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/budget_change.controller.js",
+    "/foo/bar/controllers/budget_change.controller.js": {
+      "path": "/foo/bar/controllers/budget_change.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -47125,8 +42707,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "85954e045f7e990bf28ec93dbc5608fcd282c337"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/section_budget_change.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/section_budget_change.router.js",
+    "/foo/bar/routers/section_budget_change.router.js": {
+      "path": "/foo/bar/routers/section_budget_change.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -47231,8 +42813,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "fbe2e409e044940a7ded4d2fdf20e2150d754046"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/section_budget_change.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/section_budget_change.controller.js",
+    "/foo/bar/controllers/section_budget_change.controller.js": {
+      "path": "/foo/bar/controllers/section_budget_change.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -47845,8 +43427,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "85e9708a0ee3aa16b3f4cb9d08de8b4c82c90df9"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/tag.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/tag.router.js",
+    "/foo/bar/routers/tag.router.js": {
+      "path": "/foo/bar/routers/tag.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -48006,8 +43588,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "4d6f0976bf6cbe917fad34b83c2249412433880b"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/tag.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/tag.controller.js",
+    "/foo/bar/controllers/tag.controller.js": {
+      "path": "/foo/bar/controllers/tag.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -48763,8 +44345,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "b00602e9a4636729e7a14bfb9a4d8933e55b6098"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/tag.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/tag.js",
+    "/foo/bar/helpers/tag.js": {
+      "path": "/foo/bar/helpers/tag.js",
       "statementMap": {
         "0": {
           "start": {
@@ -49319,8 +44901,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "efc389e26fdce5275fbfbf8cde77ac84f0568ac7"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/section.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/section.router.js",
+    "/foo/bar/routers/section.router.js": {
+      "path": "/foo/bar/routers/section.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -49447,8 +45029,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "5996c6aa76f8c4f652922bd16b2ad44c31f10679"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/section.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/section.controller.js",
+    "/foo/bar/controllers/section.controller.js": {
+      "path": "/foo/bar/controllers/section.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -50230,8 +45812,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "4393367e43eba0b86e954ca99e0f9ae2632b003d"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/section_spend_note.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/section_spend_note.router.js",
+    "/foo/bar/routers/section_spend_note.router.js": {
+      "path": "/foo/bar/routers/section_spend_note.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -50358,8 +45940,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "df3cd0a6966fc5d8eef8766e3b94736fa5aefe0c"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/section_spend_note.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/section_spend_note.controller.js",
+    "/foo/bar/controllers/section_spend_note.controller.js": {
+      "path": "/foo/bar/controllers/section_spend_note.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -51238,8 +46820,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "fa99b58abdfc4e73a7296aafa19d3143ccee9bce"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/services/user.service.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/services/user.service.js",
+    "/foo/bar/services/user.service.js": {
+      "path": "/foo/bar/services/user.service.js",
       "statementMap": {
         "0": {
           "start": {
@@ -51416,8 +46998,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "e22502e117ddf7b1716f683bcbbe58fd6339a056"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/spend.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/spend.router.js",
+    "/foo/bar/routers/spend.router.js": {
+      "path": "/foo/bar/routers/spend.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -51533,8 +47115,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "1b1453c7730d02d164f6d08584e8cbd94f0a339c"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/spend.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/spend.controller.js",
+    "/foo/bar/controllers/spend.controller.js": {
+      "path": "/foo/bar/controllers/spend.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -52509,8 +48091,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "484ce7849623713ec2b8b2a67d756a77509531cc"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/spend_data_source.router.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/routers/spend_data_source.router.js",
+    "/foo/bar/routers/spend_data_source.router.js": {
+      "path": "/foo/bar/routers/spend_data_source.router.js",
       "statementMap": {
         "0": {
           "start": {
@@ -52637,8 +48219,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "54bd0c13189d01a500c26858c70f8db53b8c8811"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/spend_data_source.controller.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/controllers/spend_data_source.controller.js",
+    "/foo/bar/controllers/spend_data_source.controller.js": {
+      "path": "/foo/bar/controllers/spend_data_source.controller.js",
       "statementMap": {
         "0": {
           "start": {
@@ -53219,8 +48801,8 @@
       "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
       "hash": "8df08acac4f07cc1fd46056f5388a12a47b4b5c7"
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/rollover.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/helpers/rollover.js",
+    "/foo/bar/helpers/rollover.js": {
+      "path": "/foo/bar/helpers/rollover.js",
       "statementMap": {
         "0": {
           "start": {
@@ -55325,8 +50907,8 @@
         ]
       }
     },
-    "/Users/hcancelik/Sites/chd-portal/AccountingService/services/onyx.service.js": {
-      "path": "/Users/hcancelik/Sites/chd-portal/AccountingService/services/onyx.service.js",
+    "/foo/bar/services/onyx.service.js": {
+      "path": "/foo/bar/services/onyx.service.js",
       "statementMap": {
         "0": {
           "start": {

@@ -2,6 +2,9 @@ const core = require("@actions/core");
 const github = require("@actions/github");
 const exec = require("@actions/exec");
 
+const { getCoverageSummary } = require("./coverage.helper");
+const { generateTagLine, postComment } = require("./comment.helper");
+
 const SERVICES_WITH_TESTS = [
   "AccountingService",
   "AgreementService",
@@ -24,10 +27,12 @@ class Action {
   constructor (options) {
     this.client = github.getOctokit(options.token);
     this.context = github.context;
+
+    this.checkCoverage = options.checkCoverage;
     this.dbUser = options.dbUser;
     this.dbPassword = options.dbPassword;
     this.port = options.port;
-    this.prNumber = github.context.payload.pull_request?.number;
+    this.coverageThreshold = options.coverageThreshold;
   }
 
   getBaseAndHead () {
@@ -114,10 +119,9 @@ class Action {
     }
   }
 
-  //"✅" : "🛑"
   generateCoverageReport (service) {
     const report = require(`${process.cwd()}/${service}/coverage-report.json`);
-    let content = `## ${service}\n\n`;
+    let content = `## ${service}\n`;
 
     if (!report.success) {
       content += `🛑 Test suite has failed to run.\n\n`;
@@ -125,12 +129,21 @@ class Action {
       return content;
     }
 
-    content += `Test suite ran ${report.numFailedTests === 0 ? "successfully" : "with errors"}.\n`;
+    content += `Test suite ran ${report.numFailedTests === 0 ? "successfully ✅" : "with errors 🛑"}.\n`;
     if (report.numFailedTests > 0) {
       content += `${report.numFailedTests} test${report.numFailedTests > 1 ? "s" : ""} failed.\n`;
     } else {
       content += `${report.numPassedTests} test${report.numFailedTests > 1 ? "s" : ""} passed in ${report.numPassedTestSuites} suites.\n`;
     }
+
+    const coverage = getCoverageSummary(report);
+
+    content += "| Status | Category | Coverage % | Covered/Total |\n";
+    content += "|:------:|:-------|:-------|:-------|\n";
+
+    coverage.forEach((cvg) => {
+      content += `| ${cvg.percentage > this.coverageThreshold ? ":green_circle:" : ":red_circle:"} | ${cvg.category} | ${cvg.percentage.toFixed(2)}% | ${cvg.covered}/${cvg.total} |\n`;
+    });
 
     return content;
   }
@@ -138,7 +151,7 @@ class Action {
   generateReportComment (services) {
     core.info(`Generating coverage report...`);
 
-    let comment = `<!-- Coverage Report: ${this.prNumber} -->`;
+    let comment = generateTagLine();
     comment += "# Coverage Report\n\n";
 
     for (let i = 0; i < services.length; i++) {
@@ -154,11 +167,6 @@ class Action {
     return comment;
   }
 
-  async postComment (report) {
-    core.info(`Posting comment...`);
-    core.info(`Report: ${report}`);
-  }
-
   async run () {
     const changes = await this.getFileChanges();
 
@@ -170,9 +178,11 @@ class Action {
       core.info(`Found services with changes: ${services.join(", ")}...`);
       await this.runTests(services);
 
-      const comment = this.generateReportComment(services);
+      if (this.checkCoverage || this.checkCoverage === "true") {
+        const comment = this.generateReportComment(services);
 
-      await this.postComment(comment);
+        await postComment(comment);
+      }
     }
   }
 }

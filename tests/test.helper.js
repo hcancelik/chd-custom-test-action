@@ -41,4 +41,15 @@ module.exports = {
       changes: 2,
     },
   ],
+  exampleCoverageComment: () => {
+    let result = "## tests\nTest suite ran successfully ✅.\n300 test passed in 10 suites.\n";
+    result += "| Status | Category | Coverage % | Covered/Total |\n";
+    result += "|:------:|:-------|:-------|:-------|\n";
+    result += "| :red_circle: | Statements | 29.46% | 733/2488 |\n";
+    result += "| :red_circle: | Branches | 11.65% | 97/397 |\n";
+    result += "| :red_circle: | Functions | 24.43% | 97/397 |\n";
+    result += "| :red_circle: | Lines | 30.05% | 732/2436 |\n";
+
+    return result;
+  }
 };
