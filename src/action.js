@@ -99,7 +99,10 @@ class Action {
         await exec.exec(`npm --prefix ./${service} install`);
 
         core.info(`Running tests for ${service}...`);
-        await exec.exec(`PORT=9000 DB_USERNAME_TEST=postgres DB_PASSWORD_TEST=postgres npm --prefix ./${service} run test:ci`);
+        await exec.exec("bash", [
+            "-c",
+            `PORT=9000 DB_USERNAME_TEST=postgres DB_PASSWORD_TEST=postgres npm --prefix ./${service} run test:ci`
+        ]);
       }
     }
   }
@@ -112,6 +115,7 @@ class Action {
     if (services.length === 0) {
       core.info("No files have changed in service directories with tests.")
     } else {
+      core.info(`Found services with changes: ${services.join(', ')}...`);
       await this.runTests(services);
 
       // Comment the coverage report results in a single comment
