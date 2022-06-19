@@ -10063,6 +10063,7 @@ class Action {
     this.client = github.getOctokit(options.token);
     this.context = github.context;
 
+    this.token = options.token;
     this.coverage = options.coverage;
     this.dbUser = options.dbUser;
     this.dbPassword = options.dbPassword;
@@ -10216,7 +10217,7 @@ class Action {
       if (this.coverage || this.coverage === "true") {
         const comment = await this.generateReportComment(services);
 
-        await postComment(comment);
+        await postComment(this.token, comment);
       }
     }
   }
@@ -10236,8 +10237,8 @@ const github = __nccwpck_require__(5438);
 
 const prNumber = github.context.payload.pull_request?.number;
 
-async function checkComment () {
-  const octokit = getOctokit(context.github.token);
+async function checkComment (token) {
+  const octokit = getOctokit(token);
   const { owner, repo } = context.repo;
   const commentList = await octokit.paginate(
     'GET /repos/{owner}/{repo}/issues/{issue_number}/comments',
@@ -10255,8 +10256,8 @@ async function checkComment () {
   return previousReport || null;
 }
 
-async function addComment (comment) {
-  const octokit = getOctokit(context.github.token);
+async function addComment (token, comment) {
+  const octokit = getOctokit(token);
   const { owner, repo } = context.repo;
   const { data } = await octokit.repos.createCommitComment({
     owner,
@@ -10268,8 +10269,8 @@ async function addComment (comment) {
   return data;
 }
 
-async function updateComment (existingComment, comment) {
-  const octokit = getOctokit(context.github.token);
+async function updateComment (token, existingComment, comment) {
+  const octokit = getOctokit(token);
   const { owner, repo } = context.repo;
   const { data } = await octokit.issues.updateComment({
     owner,
@@ -10285,17 +10286,17 @@ module.exports = {
   generateTagLine () {
     return `<!-- Coverage Report: ${prNumber} -->`;
   },
-  async postComment (comment) {
-    const existingComment = await checkComment();
+  async postComment (token, comment) {
+    const existingComment = await checkComment(token);
 
     if (existingComment) {
       core.info("Comment already exists. Updating the comment...");
 
-      await updateComment(existingComment, comment);
+      await updateComment(token, existingComment, comment);
     } else {
       core.info("Creating a new comment...");
 
-      await addComment(comment);
+      await addComment(token, comment);
     }
   },
 };

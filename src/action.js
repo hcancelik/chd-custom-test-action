@@ -28,6 +28,7 @@ class Action {
     this.client = github.getOctokit(options.token);
     this.context = github.context;
 
+    this.token = options.token;
     this.coverage = options.coverage;
     this.dbUser = options.dbUser;
     this.dbPassword = options.dbPassword;
@@ -181,7 +182,7 @@ class Action {
       if (this.coverage || this.coverage === "true") {
         const comment = await this.generateReportComment(services);
 
-        await postComment(comment);
+        await postComment(this.token, comment);
       }
     }
   }
