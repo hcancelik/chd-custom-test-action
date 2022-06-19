@@ -10136,7 +10136,7 @@ class Action {
         await exec.exec(`npm --prefix ./${service} install`);
 
         core.info(`Running tests for ${service}...`);
-        await exec.exec(`npm --prefix ./${service} run test:ci`);
+        await exec.exec(`PORT=9000 DB_USERNAME_TEST=postgres DB_PASSWORD_TEST=postgres npm --prefix ./${service} run test:ci`);
       }
     }
   }
