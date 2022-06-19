@@ -10053,93 +10053,145 @@ const SERVICES_WITH_TESTS = [
   "GatewayService",
   "NotificationService",
   "ReportingService",
-]
+];
 
 class Action {
-  constructor (token, context) {
-    this.token = token;
-    this.context = context;
-    this.client = github.getOctokit(token);
+  constructor (options) {
+    this.client = github.getOctokit(options.token);
+    this.dbUser = options.dbUser;
+    this.dbPassword = options.dbPassword;
+    this.port = options.port;
+    this.prNumber = github.context.payload.pull_request?.number;
   }
 
-  getBaseAndHead(context) {
-    const eventName = context.eventName
+  getBaseAndHead () {
+    const context = github.context;
+    const eventName = context.eventName;
 
     let base;
     let head;
 
     switch (eventName) {
-      case 'pull_request':
-        base = context.payload.pull_request?.base?.sha
-        head = context.payload.pull_request?.head?.sha
-        break
-      case 'push':
-        base = context.payload.before
-        head = context.payload.after
-        break
+      case "pull_request":
+        base = context.payload.pull_request?.base?.sha;
+        head = context.payload.pull_request?.head?.sha;
+        break;
+      case "push":
+        base = context.payload.before;
+        head = context.payload.after;
+        break;
       default:
         core.setFailed(
-          `This action only supports pull requests and pushes, ${context.eventName} events are not supported.`
-        )
+          `This action only supports pull requests and pushes, ${context.eventName} events are not supported.`,
+        );
     }
 
-    return { base, head }
+    return { base, head };
   }
 
-  async getFileChanges() {
-    const { base, head } = this.getBaseAndHead(this.context)
+  async getFileChanges () {
+    const { base, head } = this.getBaseAndHead();
 
     const response = await this.client.rest.repos.compareCommits({
       base: base,
       head: head,
-      owner: this.context.repo.owner,
-      repo: this.context.repo.repo
-    })
+      owner: github.context.repo.owner,
+      repo: github.context.repo.repo,
+    });
 
     if (response.status !== 200) {
       core.setFailed(
-        `The GitHub API for comparing the base and head commits for this ${this.context.eventName} event returned ${response.status}, expected 200.`
-      )
+        `The GitHub API for comparing the base and head commits for this ${github.context.eventName} event returned ${response.status}, expected 200.`,
+      );
     }
 
-    if (response.data.status !== 'ahead') {
+    if (response.data.status !== "ahead") {
       core.setFailed(
-        `The head commit for this ${this.context.eventName} event is not ahead of the base commit.`
-      )
+        `The head commit for this ${github.context.eventName} event is not ahead of the base commit.`,
+      );
     }
 
     return response.data.files;
   }
 
-  getServicesWithChanges(changes) {
+  getServicesWithChanges (changes) {
     const services = new Set();
 
     changes.forEach((change) => {
-      const service = change.filename?.split('/')[0] || "";
+      const service = change.filename?.split("/")[0] || "";
 
       if (SERVICES_WITH_TESTS.includes(service)) {
         services.add(service);
       }
-    })
+    });
 
     return Array.from(services);
   }
 
-  async runTests(services) {
+  async runTests (services) {
     for (let i = 0; i < services.length; i++) {
       const service = services[i];
 
       if (SERVICES_WITH_TESTS.includes(service)) {
+        core.startGroup("${service}");
+
         core.info(`Installing npm packages for ${service}...`);
         await exec.exec(`npm --prefix ./${service} install`);
 
         core.info(`Running tests for ${service}...`);
         await exec.exec("bash", [
-            "-c",
-            `PORT=9000 DB_USERNAME_TEST=postgres DB_PASSWORD_TEST=postgres npm --prefix ./${service} run test:ci`
+          "-c",
+          `PORT=${this.port} DB_USERNAME_TEST=${this.dbUser} DB_PASSWORD_TEST=${this.dbPassword} npm --prefix ./${service} run test:ci`,
         ]);
+
+        core.endGroup();
       }
     }
+  }
+
+  //"✅" : "🛑"
+  generateCoverageReport (service) {
+    const report = require(`./${service}/test-coverage-report.json`);
+    let content = `## ${service}\n\n`;
+
+    if (!report.success) {
+      content += `🛑 Test suite has failed to run.\n\n`;
+
+      return content;
+    }
+
+    content += `Test suite ran ${report.numFailedTests === 0 ? "successfully" : "with errors"}.\n`;
+    if (report.numFailedTests > 0) {
+      content += `${report.numFailedTests} tests failed.\n`;
+    } else {
+      content += `${report.numPassedTests} tests passed in ${report.numPassedTestSuites} suites.\n`;
+    }
+
+    return content;
+  }
+
+  generateReportComment (services) {
+    core.info(`Generating coverage report...`);
+
+    let comment = `<!-- Coverage Report: ${this.prNumber} -->`;
+    comment += "# Coverage Report\n\n";
+
+    for (let i = 0; i < services.length; i++) {
+      const service = services[i];
+
+      comment += this.generateCoverageReport(service);
+
+      if (i !== services.length - 1) {
+        comment += "---\n";
+      }
+    }
+
+    return comment;
+  }
+
+  async postComment (report) {
+    core.info(`Posting comment...`);
+    core.info(`Report: ${report}`);
   }
 
   async run () {
@@ -10148,13 +10200,14 @@ class Action {
     const services = this.getServicesWithChanges(changes);
 
     if (services.length === 0) {
-      core.info("No files have changed in service directories with tests.")
+      core.notice("No files have changed in service directories with tests.");
     } else {
-      core.info(`Found services with changes: ${services.join(', ')}...`);
+      core.info(`Found services with changes: ${services.join(", ")}...`);
       await this.runTests(services);
 
-      // Comment the coverage report results in a single comment
-      // (Update existing comment if it exists)
+      const comment = this.generateReportComment(services);
+
+      await this.postComment(comment);
     }
   }
 }
@@ -10358,14 +10411,16 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const core = __nccwpck_require__(2186);
-const { context } = __nccwpck_require__(5438);
 const Action = __nccwpck_require__(3348);
 
 async function run() {
   try {
     const token = core.getInput("TOKEN");
+    const dbUser = core.getInput("DB_USER");
+    const dbPassword = core.getInput("DB_PASSWORD");
+    const port = core.getInput("PORT");
 
-    const action = new Action(token, context);
+    const action = new Action({ token, dbUser, dbPassword, port });
 
     await action.run();
   } catch (error) {

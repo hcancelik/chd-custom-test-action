@@ -7,6 +7,21 @@ inputs:
       No need to set this unless need to use a different token.
     required: true
     default: ${{ github.token }}
+  database_user:
+    description: >
+      Test database user.
+    required: true
+    default: postgres
+  database_password:
+    description: >
+      Test database password.
+    required: true
+    default: password
+  port:
+    description: >
+      Port number to pass to services for test.
+    required: true
+    default: "9000"
 runs:
   using: 'node16'
   main: 'dist/index.js'
